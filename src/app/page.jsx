@@ -7,6 +7,10 @@ import DiasporaAssurance from './components/DiasporaAssurance';
 import PropertyGrid from './components/PropertyGrid';
 import PropertyMap from './components/PropertyMap';
 import BrandLogo from './components/BrandLogo';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
 import './globals.css';
 
 
@@ -16,19 +20,22 @@ export default function Home() {
   
   return (
     <main>
-      {/* Navbar */}
-      <nav className="flex items-center justify-between p-4 bg-gray-900 text-white">
-        <BrandLogo />
-        <div className="space-x-4 h-auto drop-shadow-amber-500">
-          <a href="#home" className="hover:text-blue-500">Home</a>
-          <a href="#about" className="hover:text-blue-500">About Us</a>
-          <a href="#services" className="hover:text-blue-500">Services</a>
-          <a href="#properties" className="hover:text-blue-500">Properties</a>
-          <a href="#investment-plans" className="hover:text-blue-500">Investment Plans</a>
-          <a href="#testimonials" className="hover:text-blue-500">Testimonials</a>
-          <a href="#contact" className="hover:text-blue-500">Contact Us</a>
-        </div>
-      </nav>
+      {/* Material UI Navbar */}
+      <AppBar position="static" color="primary" elevation={2}>
+        <Toolbar>
+          <BrandLogo />
+          <Box sx={{ flexGrow: 1 }} />
+          <Box sx={{ display: 'flex', gap: 2 }}>
+            <Button color="inherit" href="#home">Home</Button>
+            <Button color="inherit" href="#about">About Us</Button>
+            <Button color="inherit" href="#services">Services</Button>
+            <Button color="inherit" href="#properties">Properties</Button>
+            <Button color="inherit" href="#investment-plans">Investment Plans</Button>
+            <Button color="inherit" href="#testimonials">Testimonials</Button>
+            <Button color="inherit" href="#contact">Contact Us</Button>
+          </Box>
+        </Toolbar>
+      </AppBar>
       <Hero />
       <PropertyGrid />
       <InvestmentPlans />

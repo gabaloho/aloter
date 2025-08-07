@@ -1,8 +1,12 @@
 'use client';
 import React from 'react';
-import { useState } from 'react';
-import { useEffect } from 'react';
-import { CheckIcon } from '@heroicons/react/16/solid';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import Grid from '@mui/material/Grid';
 
 export default function InvestmentPlans() {
   const plans = [
@@ -26,28 +30,37 @@ export default function InvestmentPlans() {
       price: "₦150,000",
       features: ["0.5% monthly ROI", "6-month duration", "Property co-ownership"]
     },
-    // ...other plans
   ];
 
   return (
-    <div className="grid md:grid-cols-3 gap-6">
+    <Grid container spacing={4} sx={{ py: 6 }}>
       {plans.map(plan => (
-        <div key={plan.name} className="border rounded-lg p-6">
-          <h3 className="font-bold text-xl">{plan.name}</h3>
-          <p className="text-2xl my-4">{plan.price}</p>
-          <ul className="space-y-2">
-            {plan.features.map(feat => (
-              <li key={feat} className="flex items-center">
-                <CheckIcon className="text-green-500 mr-2" />
-                {feat}
-              </li>
-            ))}
-          </ul>
-          <button className="mt-6 bg-blue-600 text-white px-4 py-2 rounded">
-            Get Started
-          </button>
-        </div>
+        <Grid item xs={12} md={3} key={plan.name}>
+          <Card elevation={3}>
+            <CardContent>
+              <Typography variant="h6" component="div" gutterBottom>
+                {plan.name}
+              </Typography>
+              <Typography variant="h4" color="primary" gutterBottom>
+                {plan.price}
+              </Typography>
+              <ul style={{ paddingLeft: 0, listStyle: 'none' }}>
+                {plan.features.map(feat => (
+                  <li key={feat} style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}>
+                    <CheckCircleIcon color="success" sx={{ mr: 1 }} />
+                    <Typography variant="body2">{feat}</Typography>
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+            <CardActions>
+              <Button variant="contained" color="primary" fullWidth>
+                Get Started
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
       ))}
-    </div>
+    </Grid>
   );
 }

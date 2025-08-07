@@ -2,6 +2,9 @@
 import { useEffect, useState } from 'react';
 import { db } from '../firebase/config';
 import { collection, onSnapshot } from 'firebase/firestore';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
 export default function StatsCounter() {
   const [affiliateCount, setAffiliateCount] = useState(0);
@@ -16,10 +19,18 @@ export default function StatsCounter() {
   }, []);
 
   return (
-    <div className="bg-blue-50 p-8 rounded-lg">
-      <h3>Our Network</h3>
-      <div className="text-4xl font-bold">{affiliateCount}+</div>
-      <p>Trusted Partners</p>
-    </div>
+    <Box py={4} display="flex" justifyContent="center">
+      <Paper elevation={3} sx={{ p: 4, minWidth: 200, textAlign: 'center' }}>
+        <Typography variant="h6" color="primary" gutterBottom>
+          Our Network
+        </Typography>
+        <Typography variant="h3" fontWeight="bold">
+          {affiliateCount}+
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          Trusted Partners
+        </Typography>
+      </Paper>
+    </Box>
   );
 }

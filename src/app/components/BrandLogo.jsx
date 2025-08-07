@@ -1,19 +1,24 @@
-// components/BrandLogo.jsx
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Avatar from '@mui/material/Avatar';
+
 export default function BrandLogo() {
   return (
-    <div className="flex items-center">
-      <img 
-      
+    <Box display="flex" alignItems="center">
+      <Avatar
         src="/logo.svg"
-        width={48}
-        height={48}
-        alt="ALOTER REALTY LTD" 
-        className="h-12 mr-3"
+        alt="ALOTER REALTY LTD"
+        sx={{ width: 48, height: 48, mr: 2 }}
+        variant="rounded"
       />
-      <div>
-        <h1 className="text-xl font-bold">ALOTER REALTY LTD</h1>
-        <p className="text-sm text-gray-600">Turning your realty fantasies into reality</p>
-      </div>
-    </div>
-  )
+      <Box>
+        <Typography variant="h6" fontWeight="bold">
+          ALOTER REALTY LTD
+        </Typography>
+        <Typography variant="caption" color="text.secondary">
+          Turning your realty fantasies into reality
+        </Typography>
+      </Box>
+    </Box>
+  );
 }

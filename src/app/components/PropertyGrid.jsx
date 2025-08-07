@@ -1,20 +1,24 @@
 // components/PropertyGrid.jsx
 'use client';
-import Link from 'next/link';
-import Image from 'next/image';
 import { use, useState } from 'react';
-
+import Grid from '@mui/material/Grid';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import Chip from '@mui/material/Chip';
+import Box from '@mui/material/Box';
+import Link from 'next/link';
 
 export default function PropertyGrid({ properties = [], limit = null }) {
   const [activeFilter, setActiveFilter] = useState('all');
   const [visibleCount, setVisibleCount] = useState(limit || 6);
-  
 
-  // ...
 
   // Filter properties based on active filter
-  const filteredProperties = activeFilter === 'all' 
-    ? properties 
+  const filteredProperties = activeFilter === 'all'
+    ? properties
     : properties.filter(property => property.type === activeFilter);
 
   // Slice to show limited properties initially
@@ -31,43 +35,43 @@ export default function PropertyGrid({ properties = [], limit = null }) {
 
   const featuredProperties = [
     {
-     id: 1,
-    title: "Luxury Villa in Lekki",
-    type: "residential",
-    status: "available",
-    price: 85000000,
-    location: "Lekki Phase 1, Lagos",
-    images: ["/property1.jpg"],
-    features: ["5 Bedrooms", "Swimming Pool", "24/7 Security"],
-    slug: "luxury-villa-lekki"
+      id: 1,
+      title: "Luxury Villa in Lekki",
+      type: "residential",
+      status: "available",
+      price: 85000000,
+      location: "Lekki Phase 1, Lagos",
+      images: ["/property1.jpg"],
+      features: ["5 Bedrooms", "Swimming Pool", "24/7 Security"],
+      slug: "luxury-villa-lekki"
     },
     {
       id: 2,
-    title: "Luxury Villa in Lekki",
-    type: "residential",
-    status: "available",
-    price: 85000000,
-    location: "Lekki Phase 1, Lagos",
-    images: ["/property1.jpg"],
-    features: ["5 Bedrooms", "Swimming Pool", "24/7 Security"],
-    slug: "luxury-villa-lekki"
+      title: "Luxury Villa in Lekki",
+      type: "residential",
+      status: "available",
+      price: 85000000,
+      location: "Lekki Phase 1, Lagos",
+      images: ["/property1.jpg"],
+      features: ["5 Bedrooms", "Swimming Pool", "24/7 Security"],
+      slug: "luxury-villa-lekki"
     },
     {
       id: 3,
-    title: "Luxury Villa in Lekki",
-    type: "residential",
-    status: "available",
-    price: 85000000,
-    location: "Lekki Phase 1, Lagos",
-    images: ["/property1.jpg"],
-    features: ["5 Bedrooms", "Swimming Pool", "24/7 Security"],
-    slug: "luxury-villa-lekki"
+      title: "Luxury Villa in Lekki",
+      type: "residential",
+      status: "available",
+      price: 85000000,
+      location: "Lekki Phase 1, Lagos",
+      images: ["/property1.jpg"],
+      features: ["5 Bedrooms", "Swimming Pool", "24/7 Security"],
+      slug: "luxury-villa-lekki"
     },
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <Box py={8} bgcolor="grey.50">
+      <Box maxWidth="lg" mx="auto" px={2}>
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Properties</h2>
@@ -85,11 +89,10 @@ export default function PropertyGrid({ properties = [], limit = null }) {
                 setActiveFilter(type.id);
                 setVisibleCount(limit || 6);
               }}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                activeFilter === type.id
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${activeFilter === type.id
                   ? 'bg-blue-600 text-white'
                   : 'bg-white text-gray-700 hover:bg-gray-100'
-              }`}
+                }`}
             >
               {type.label}
             </button>
@@ -97,56 +100,45 @@ export default function PropertyGrid({ properties = [], limit = null }) {
         </div>
 
         {/* Property Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <Grid container spacing={4}>
           {displayedProperties.map((property) => (
-            <div key={property.id} className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
-              {/* Property Image */}
-              <div className="relative h-64 w-full">
-                <Image
-                  src={property.images[0]}
+            <Grid item xs={12} md={4} key={property.id}>
+              <Card>
+                <CardMedia
+                  component="img"
+                  height="200"
+                  image={property.images[0]}
                   alt={property.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-                {/* Status Badge */}
-                <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-xs font-semibold shadow">
-                  {property.status === 'sold' ? 'Sold' : 'Available'}
-                </div>
-              </div>
-
-              {/* Property Details */}
-              <div className="p-6">
-                <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-bold text-gray-900">{property.title}</h3>
-                  <p className="text-lg font-bold text-blue-600">₦{property.price.toLocaleString()}</p>
-                </div>
-
-                <p className="text-gray-600 mb-4 flex items-center">
-                  <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                  </svg>
-                  {property.location}
-                </p>
-
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {property.features.slice(0, 3).map((feature, index) => (
-                    <span key={index} className="bg-gray-100 px-2 py-1 rounded text-xs text-gray-700">
-                      {feature}
-                    </span>
-                  ))}
-                </div>
-
-                <Link 
-                  href={`/properties/${property.slug}`}
-                  className="inline-block w-full text-center bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-300"
-                >
-                  View Details
-                </Link>
-              </div>
-            </div>
+                <CardContent>
+                  <Typography variant="h6" fontWeight="bold">
+                    {property.title}
+                  </Typography>
+                  <Typography color="primary" fontWeight="bold">
+                    ₦{property.price.toLocaleString()}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" mb={1}>
+                    {property.location}
+                  </Typography>
+                  <Box mb={2}>
+                    {property.features.slice(0, 3).map((feature, idx) => (
+                      <Chip key={idx} label={feature} size="small" sx={{ mr: 0.5, mb: 0.5 }} />
+                    ))}
+                  </Box>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    fullWidth
+                    component={Link}
+                    href={`/properties/${property.slug}`}
+                  >
+                    View Details
+                  </Button>
+                </CardContent>
+              </Card>
+            </Grid>
           ))}
-        </div>
+        </Grid>
 
         {/* Load More Button (if applicable) */}
         {!limit && visibleCount < filteredProperties.length && (
@@ -159,7 +151,7 @@ export default function PropertyGrid({ properties = [], limit = null }) {
             </button>
           </div>
         )}
-      </div>
-    </section>
+      </Box>
+    </Box>
   );
 }
