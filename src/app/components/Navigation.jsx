@@ -155,11 +155,11 @@ export default function Navigation() {
         position="sticky" 
         elevation={scrolled ? 8 : 0}
         sx={{ 
-          backgroundColor: scrolled ? 'rgba(255,255,255,0.95)' : 'rgba(255,255,255,0.98)',
+          backgroundColor: 'grey.900',
           backdropFilter: 'blur(20px)',
-          borderBottom: scrolled ? 'none' : '1px solid rgba(0,100,215,0.1)',
+          borderBottom: scrolled ? 'none' : '1px solid rgba(255,255,255,0.1)',
           transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-          boxShadow: scrolled ? '0 8px 32px rgba(0,100,215,0.15)' : '0 1px 3px rgba(0,0,0,0.05)',
+          boxShadow: scrolled ? '0 8px 32px rgba(0,0,0,0.3)' : '0 1px 3px rgba(0,0,0,0.2)',
         }}
       >
         <Container maxWidth="xl">
@@ -188,7 +188,7 @@ export default function Navigation() {
                   onClick={() => handleNavClick(item.href)}
                   startIcon={item.icon}
                   sx={{
-                    color: 'text.primary',
+                    color: 'white',
                     fontWeight: 600,
                     fontSize: '0.95rem',
                     px: 2.5,
@@ -198,8 +198,8 @@ export default function Navigation() {
                     position: 'relative',
                     transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                     '&:hover': {
-                      backgroundColor: 'rgba(0,100,215,0.08)',
-                      color: 'primary.main',
+                      backgroundColor: 'rgba(255,255,255,0.1)',
+                      color: 'white',
                       transform: 'translateY(-1px)',
                     },
                     '&::after': {
@@ -209,7 +209,7 @@ export default function Navigation() {
                       left: '50%',
                       width: 0,
                       height: '3px',
-                      backgroundColor: 'primary.main',
+                      backgroundColor: '#42a5f5',
                       borderRadius: '3px',
                       transition: 'all 0.3s ease',
                       transform: 'translateX(-50%)',
@@ -262,15 +262,15 @@ export default function Navigation() {
                   fontWeight: 600,
                   borderRadius: 3,
                   textTransform: 'none',
-                  borderColor: 'primary.main',
-                  color: 'primary.main',
+                  borderColor: 'white',
+                  color: 'white',
                   borderWidth: 2,
                   transition: 'all 0.3s ease',
                   '&:hover': {
-                    backgroundColor: 'primary.main',
-                    color: 'white',
+                    backgroundColor: 'white',
+                    color: 'grey.900',
                     transform: 'translateY(-1px)',
-                    boxShadow: '0 4px 16px rgba(0,100,215,0.3)',
+                    boxShadow: '0 4px 16px rgba(255,255,255,0.3)',
                   }
                 }}
               >
@@ -284,10 +284,10 @@ export default function Navigation() {
               sx={{
                 display: { xs: 'flex', lg: 'none' },
                 ml: 1,
-                backgroundColor: 'rgba(0,100,215,0.1)',
-                color: 'primary.main',
+                backgroundColor: 'rgba(255,255,255,0.1)',
+                color: 'white',
                 '&:hover': {
-                  backgroundColor: 'primary.main',
+                  backgroundColor: 'rgba(255,255,255,0.2)',
                   color: 'white',
                   transform: 'scale(1.1)',
                 }

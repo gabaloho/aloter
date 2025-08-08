@@ -177,8 +177,8 @@ export default function Hero() {
               size="large" 
               href="#properties"
               sx={{
-                backgroundColor: 'white',
-                color: '#0064d7',
+                backgroundColor: 'white !important',
+                color: '#0064d7 !important',
                 px: 5,
                 py: 2,
                 fontSize: '1.2rem',
@@ -187,14 +187,35 @@ export default function Hero() {
                 minWidth: '200px',
                 boxShadow: '0 8px 32px rgba(0,0,0,0.3)',
                 textDecoration: 'none',
+                border: 'none !important',
+                background: 'white !important',
+                backgroundImage: 'none !important',
+                backgroundSize: 'auto !important',
+                backgroundRepeat: 'no-repeat !important',
+                backgroundPosition: '0% 0% !important',
+                backgroundAttachment: 'scroll !important',
+                backgroundOrigin: 'padding-box !important',
+                backgroundClip: 'border-box !important',
+                textShadow: 'none !important',
+                // Override Material-UI's variant styles completely
+                '--variant-containedBg': 'white !important',
+                '--variant-containedColor': '#0064d7 !important',
+                '&.MuiButton-contained': {
+                  backgroundColor: 'white !important',
+                  color: '#0064d7 !important',
+                  backgroundImage: 'none !important',
+                },
                 '&:hover': {
-                  backgroundColor: '#f8f9fa',
-                  color: '#0052cc',
+                  backgroundColor: '#f8f9fa !important',
+                  color: '#0052cc !important',
                   transform: 'translateY(-3px)',
                   boxShadow: '0 12px 40px rgba(0,0,0,0.4)',
+                  backgroundImage: 'none !important',
                 },
                 '&:focus': {
-                  color: '#0064d7',
+                  backgroundColor: 'white !important',
+                  color: '#0064d7 !important',
+                  backgroundImage: 'none !important',
                 }
               }}
             >
@@ -205,23 +226,49 @@ export default function Hero() {
               size="large" 
               href="#contact"
               sx={{
-                borderColor: 'white',
-                borderWidth: 2,
-                color: 'white',
+                borderColor: 'white !important',
+                borderWidth: '2px !important',
+                color: 'white !important',
                 px: 5,
                 py: 2,
                 fontSize: '1.2rem',
                 fontWeight: 700,
                 borderRadius: '50px',
                 minWidth: '200px',
-                backgroundColor: 'rgba(255,255,255,0.1)',
+                backgroundColor: 'transparent !important',
                 backdropFilter: 'blur(10px)',
+                background: 'transparent !important',
+                backgroundImage: 'none !important',
+                backgroundSize: 'auto !important',
+                backgroundRepeat: 'no-repeat !important',
+                backgroundPosition: '0% 0% !important',
+                backgroundAttachment: 'scroll !important',
+                backgroundOrigin: 'padding-box !important',
+                backgroundClip: 'border-box !important',
+                textShadow: '2px 2px 4px rgba(0,0,0,0.8), 0 0 8px rgba(0,0,0,0.6) !important',
+                // Override Material-UI's variant styles
+                '--variant-outlinedColor': 'white !important',
+                '--variant-outlinedBorder': 'white !important',
+                '&.MuiButton-outlined': {
+                  color: 'white !important',
+                  borderColor: 'white !important',
+                  backgroundColor: 'transparent !important',
+                  backgroundImage: 'none !important',
+                },
                 '&:hover': {
-                  borderColor: 'white',
-                  borderWidth: 2,
-                  backgroundColor: 'rgba(255,255,255,0.2)',
+                  borderColor: 'white !important',
+                  borderWidth: '2px !important',
+                  backgroundColor: 'rgba(255,255,255,0.15) !important',
+                  color: 'white !important',
                   transform: 'translateY(-3px)',
                   boxShadow: '0 8px 32px rgba(255,255,255,0.2)',
+                  backgroundImage: 'none !important',
+                },
+                '&:focus': {
+                  backgroundColor: 'transparent !important',
+                  color: 'white !important',
+                  borderColor: 'white !important',
+                  backgroundImage: 'none !important',
                 }
               }}
             >

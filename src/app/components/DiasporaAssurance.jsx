@@ -212,8 +212,8 @@ export default function DiasporaAssurance() {
               href="#contact"
               sx={{
                 display: 'inline-block',
-                backgroundColor: 'white',
-                color: '#0064d7',
+                backgroundColor: 'white !important',
+                color: '#0064d7 !important',
                 px: 6,
                 py: 3,
                 borderRadius: '50px',
@@ -223,10 +223,15 @@ export default function DiasporaAssurance() {
                 minWidth: '200px',
                 boxShadow: '0 8px 24px rgba(0,0,0,0.15)',
                 transition: 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+                background: 'white !important',
+                backgroundImage: 'none !important',
+                textShadow: 'none',
                 '&:hover': {
-                  backgroundColor: '#f0f8ff',
+                  backgroundColor: '#f0f8ff !important',
+                  color: '#0052cc !important',
                   transform: 'translateY(-3px) scale(1.05)',
                   boxShadow: '0 12px 32px rgba(0,0,0,0.2)',
+                  backgroundImage: 'none !important',
                 }
               }}
             >
@@ -237,8 +242,8 @@ export default function DiasporaAssurance() {
               href="#properties"
               sx={{
                 display: 'inline-block',
-                backgroundColor: 'transparent',
-                color: 'white',
+                backgroundColor: 'transparent !important',
+                color: 'white !important',
                 border: '2px solid white',
                 px: 6,
                 py: 3,
@@ -248,11 +253,16 @@ export default function DiasporaAssurance() {
                 fontSize: '1.2rem',
                 minWidth: '200px',
                 transition: 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+                background: 'transparent !important',
+                backgroundImage: 'none !important',
+                textShadow: '0 0 8px rgba(0,0,0,0.8)',
                 '&:hover': {
-                  backgroundColor: 'white',
-                  color: '#0064d7',
+                  backgroundColor: 'white !important',
+                  color: '#0064d7 !important',
                   transform: 'translateY(-3px) scale(1.05)',
                   boxShadow: '0 12px 32px rgba(255,255,255,0.3)',
+                  backgroundImage: 'none !important',
+                  textShadow: 'none',
                 }
               }}
             >
