@@ -237,7 +237,7 @@ export default function Contact() {
                           📱 Phone
                         </Typography>
                         <Typography variant="body1" color="text.primary" fontWeight={600}>
-                          +234 (0) 123 456 7890
+                          +234 (0) 704 695 2003
                         </Typography>
                       </Box>
                     </Box>
