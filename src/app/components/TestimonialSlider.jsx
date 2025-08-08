@@ -14,6 +14,7 @@ import Stack from '@mui/material/Stack';
 export default function TestimonialSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(1);
+  const [isClient, setIsClient] = useState(false);
   const timerRef = useRef(null);
 
   const testimonials = [
@@ -24,7 +25,7 @@ export default function TestimonialSlider() {
       location: "Lagos, Nigeria",
       content: "ALOTER helped me acquire two prime properties in Abuja without any hassle. Their team handled everything from documentation to handing over. Truly professional!",
       rating: 5,
-      image: "/testimonials/obinna.jpg",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
     },
     {
       id: 2,
@@ -33,7 +34,7 @@ export default function TestimonialSlider() {
       location: "London, UK",
       content: "As someone living abroad, I was nervous about investing in Nigeria. ALOTER's transparent process and regular video updates gave me peace of mind.",
       rating: 5,
-      image: "/testimonials/amina.jpg",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b5e5?w=150&h=150&fit=crop&crop=face",
     },
     {
       id: 3,
@@ -42,7 +43,7 @@ export default function TestimonialSlider() {
       location: "Port Harcourt",
       content: "Their low-income investment plan made it possible for me to own land in Lagos. Within 2 years, the value had tripled! Life-changing opportunity.",
       rating: 4,
-      image: "/testimonials/chukwuemeka.jpg",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
     },
     {
       id: 4,
@@ -51,12 +52,15 @@ export default function TestimonialSlider() {
       location: "Ibadan, Nigeria",
       content: "We partnered with ALOTER to develop a shopping complex. Their project management was exceptional - delivered 3 weeks ahead of schedule!",
       rating: 5,
-      image: "/testimonials/folake.jpg",
+      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face",
     },
   ];
 
   // Auto-advance testimonials
   useEffect(() => {
+    // Ensure we're on the client side
+    setIsClient(true);
+    
     timerRef.current = setInterval(() => {
       setDirection(1);
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
@@ -93,6 +97,44 @@ export default function TestimonialSlider() {
       opacity: 0,
     }),
   };
+
+  // Prevent hydration mismatch by not running animations until client-side
+  if (!isClient) {
+    return (
+      <Box py={8} bgcolor="blue.50">
+        <Box maxWidth="lg" mx="auto" px={2}>
+          <Box textAlign="center" mb={6}>
+            <Typography variant="h4" fontWeight="bold" mb={2}>
+              Client Success Stories
+            </Typography>
+            <Typography variant="subtitle1" color="text.secondary" maxWidth="md" mx="auto">
+              Hear from our satisfied clients about their ALOTER experience
+            </Typography>
+          </Box>
+          <Box position="relative" maxWidth="md" mx="auto" minHeight={350}>
+            {/* Show first testimonial without animation during server render */}
+            <Paper elevation={3} sx={{ p: 4, borderRadius: 3, height: '100%' }}>
+              <Box textAlign="center">
+                <Avatar sx={{ width: 80, height: 80, mx: 'auto', mb: 2 }}>
+                  {testimonials[0].name.charAt(0)}
+                </Avatar>
+                <Typography variant="h6" fontWeight="bold" gutterBottom>
+                  {testimonials[0].name}
+                </Typography>
+                <Typography variant="body2" color="text.secondary" gutterBottom>
+                  {testimonials[0].role} • {testimonials[0].location}
+                </Typography>
+                <Rating value={testimonials[0].rating} readOnly sx={{ mb: 2 }} />
+                <Typography variant="body1" sx={{ fontStyle: 'italic', mb: 3 }}>
+                  "{testimonials[0].content}"
+                </Typography>
+              </Box>
+            </Paper>
+          </Box>
+        </Box>
+      </Box>
+    );
+  }
 
   return (
     <Box py={8} bgcolor="blue.50">

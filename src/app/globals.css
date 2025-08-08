@@ -1,62 +1,118 @@
 
 @import "tailwindcss";
 
-
 :root {
-
-  --background: 255 255 255; /* white */
-    --foreground: 23 23 23; /* near-black */
-    --primary: 0 100 215; /* brand blue */
-    --primary-foreground: 255 255 255; /* white */
-    --secondary: 255 215 0; /* gold accent */
-    --border: 214 214 214; /* light gray border */
-
+  /* Light theme colors */
+  --background: 250 250 250; /* #fafafa */
+  --foreground: 44 44 44; /* #2c2c2c */
+  --primary: 0 100 215; /* #0064d7 */
+  --primary-foreground: 255 255 255; /* white */
+  --secondary: 255 215 0; /* #ffd700 */
+  --border: 224 224 224; /* #e0e0e0 */
+  --card: 255 255 255; /* white */
+  --muted: 245 245 245; /* #f5f5f5 */
+  --accent: 66 165 245; /* #42a5f5 */
 }
-
-:root {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
- @media (prefers-color-scheme: dark) {
-  :root {
-    --background: 0 0 0; /* black */
-    --foreground: 255 255 255; /* white */
-    --primary: 0 100 215; /* brand blue */
-    --primary-foreground: 255 255 255; /* white */
-    --secondary: 255 215 0; /* gold accent */
-    --border: 214 214 214; /* light gray border */
-  }
-  
- }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --font-sans: var(--font-geist-sans);
-    --font-mono: var(--font-geist-mono);
+    --background: 18 18 18; /* #121212 */
+    --foreground: 250 250 250; /* #fafafa */
+    --primary: 66 165 245; /* #42a5f5 */
+    --primary-foreground: 18 18 18; /* #121212 */
+    --secondary: 255 215 0; /* #ffd700 */
+    --border: 64 64 64; /* #404040 */
+    --card: 36 36 36; /* #242424 */
+    --muted: 24 24 24; /* #181818 */
+    --accent: 0 100 215; /* #0064d7 */
   }
 }
 
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: rgb(var(--background));
+  color: rgb(var(--foreground));
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+}
 
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--border));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--primary));
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Fix for Material-UI components integration */
+.MuiCssBaseline-root {
+  color: rgb(var(--foreground));
+}
+
+/* Custom utility classes */
+.gradient-primary {
+  background: linear-gradient(135deg, rgb(var(--primary)) 0%, rgb(var(--accent)) 100%);
+}
+
+.gradient-secondary {
+  background: linear-gradient(135deg, rgb(var(--secondary)) 0%, #ffecb3 100%);
+}
+
+/* Animation utilities */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Button hover effects */
+.btn-hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 100, 215, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Glass effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }

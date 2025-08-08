@@ -8,8 +8,12 @@ import Box from '@mui/material/Box';
 
 export default function StatsCounter() {
   const [affiliateCount, setAffiliateCount] = useState(0);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    // Ensure we're on the client side
+    setIsClient(true);
+    
     const affiliatesRef = collection(db, 'affiliates');
     const unsubscribe = onSnapshot(affiliatesRef, (snapshot) => {
       setAffiliateCount(snapshot.size);
@@ -17,6 +21,25 @@ export default function StatsCounter() {
 
     return () => unsubscribe();
   }, []);
+
+  // Don't render dynamic content until client-side hydration is complete
+  if (!isClient) {
+    return (
+      <Box py={4} display="flex" justifyContent="center">
+        <Paper elevation={3} sx={{ p: 4, minWidth: 200, textAlign: 'center' }}>
+          <Typography variant="h6" color="primary" gutterBottom>
+            Our Network
+          </Typography>
+          <Typography variant="h3" fontWeight="bold">
+            0+
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Trusted Partners
+          </Typography>
+        </Paper>
+      </Box>
+    );
+  }
 
   return (
     <Box py={4} display="flex" justifyContent="center">

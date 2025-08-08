@@ -30,7 +30,7 @@ export default function PropertyMap({ properties = [] }) {
                   {property.title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Price: ₦{property.price.toLocaleString()}
+                  Price: ₦{property.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
                 </Typography>
               </Popup>
             </Marker>
