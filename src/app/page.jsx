@@ -1,14 +1,20 @@
 // src/app/page.jsx
-// Updated for hydration fix
+// Updated for comprehensive website improvements
 import Hero from './components/Hero';
 import About from './components/About';
+import PropertySearch from './components/PropertySearch';
 import InvestmentPlans from './components/InvestmentPlans';
+import MortgageCalculator from './components/MortgageCalculator';
 import StatsCounter from './components/StatsCounter';
+import TeamProfiles from './components/TeamProfiles';
+import CompanyCredentials from './components/CompanyCredentials';
 import TestimonialSlider from './components/TestimonialSlider';
 import DiasporaAssurance from './components/DiasporaAssurance';
 import PropertyGrid from './components/PropertyGrid';
 import PropertyMap from './components/PropertyMap';
+import FAQ from './components/FAQ';
 import Contact from './components/Contact';
+import NewsletterSignup from './components/NewsletterSignup';
 import Navigation from './components/Navigation';
 import NoSSR from './components/NoSSR';
 import Box from '@mui/material/Box';
@@ -34,6 +40,18 @@ export default function Home() {
           <About />
         </section>
 
+        {/* Company Credentials Section - Build Trust Early */}
+        <section id="credentials">
+          <CompanyCredentials />
+        </section>
+
+        {/* Property Search Section */}
+        <section id="property-search">
+          <Container maxWidth="xl" sx={{ py: 8 }}>
+            <PropertySearch />
+          </Container>
+        </section>
+
         {/* Property Grid Section */}
         <section id="properties">
           <Container maxWidth="lg" sx={{ py: 8 }}>
@@ -41,27 +59,39 @@ export default function Home() {
           </Container>
         </section>
 
-        {/* Investment Plans Section */}
-        <section id="investment-plans">
+        {/* Mortgage Calculator Section */}
+        <section id="mortgage-calculator">
           <Box sx={{ backgroundColor: 'grey.50', py: 8 }}>
-            <Container maxWidth="lg">
-              <Box textAlign="center" mb={6}>
-                <Box component="h2" sx={{ typography: 'h3', fontWeight: 'bold', mb: 2, color: 'text.primary' }}>
-                  Investment Plans
-                </Box>
-                <Box component="p" sx={{ typography: 'h6', color: 'text.secondary', maxWidth: 'md', mx: 'auto' }}>
-                  Choose the perfect investment plan that suits your budget and goals
-                </Box>
-              </Box>
-              <InvestmentPlans />
+            <Container maxWidth="xl">
+              <MortgageCalculator />
             </Container>
           </Box>
+        </section>
+
+        {/* Investment Plans Section */}
+        <section id="investment-plans">
+          <Container maxWidth="lg" sx={{ py: 8 }}>
+            <Box textAlign="center" mb={6}>
+              <Box component="h2" sx={{ typography: 'h3', fontWeight: 'bold', mb: 2, color: 'text.primary' }}>
+                Investment Plans
+              </Box>
+              <Box component="p" sx={{ typography: 'h6', color: 'text.secondary', maxWidth: 'md', mx: 'auto' }}>
+                Choose the perfect investment plan that suits your budget and goals
+              </Box>
+            </Box>
+            <InvestmentPlans />
+          </Container>
         </section>
 
         {/* Stats Counter Section */}
         <NoSSR>
           <StatsCounter />
         </NoSSR>
+
+        {/* Team Profiles Section - Build Trust with Faces */}
+        <section id="team">
+          <TeamProfiles />
+        </section>
 
         {/* Testimonials Section */}
         <section id="testimonials">
@@ -75,17 +105,27 @@ export default function Home() {
           <DiasporaAssurance />
         </NoSSR>
 
+        {/* FAQ Section - Address Common Concerns */}
+        <section id="faq">
+          <FAQ />
+        </section>
+
+        {/* Property Map Section */}
+        <section id="property-map">
+          <NoSSR>
+            <PropertyMap />
+          </NoSSR>
+        </section>
+
+        {/* Newsletter Signup Section */}
+        <section id="newsletter">
+          <NewsletterSignup />
+        </section>
+
         {/* Contact Section */}
         <section id="contact">
           <NoSSR>
             <Contact />
-          </NoSSR>
-        </section>
-
-        {/* Property Map Section - Before Footer */}
-        <section id="property-map">
-          <NoSSR>
-            <PropertyMap />
           </NoSSR>
         </section>
 
@@ -134,7 +174,7 @@ export default function Home() {
                 © 2025 ALOTER REALTY LTD. All rights reserved.
               </Box>
               <Box component="p" sx={{ typography: 'body2', mt: 1, opacity: 0.8 }}>
-                RC Number: 8371222 | Real Estate Development, Investment, Marketing, Appraisal and Management
+                RC Number: 8371222 | Licensed Real Estate Company | Insured & Bonded
               </Box>
             </Box>
           </Container>

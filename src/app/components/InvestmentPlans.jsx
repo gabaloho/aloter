@@ -14,42 +14,34 @@ export default function InvestmentPlans() {
   const plans = [
     {
       name: "Starter Plan",
-      price: "₦50,000",
+      price: "₦100,000",
       description: "Perfect for first-time investors",
-      features: ["0.5% monthly ROI", "6-month duration", "Property co-ownership", "Basic support"],
+      features: ["0.7% monthly ROI", "12-month duration", "Property co-ownership", "Priority support", "Market insights"],
       popular: false,
       color: '#42a5f5'
     },
     {
       name: "Growth Plan", 
-      price: "₦100,000",
+      price: "₦250,000",
       description: "Ideal for growing your portfolio",
-      features: ["0.7% monthly ROI", "12-month duration", "Property co-ownership", "Priority support", "Market insights"],
+      features: ["1% monthly ROI", "18-month duration", "Full property ownership options", "Dedicated advisor", "Exclusive deals", "Legal support"],
       popular: true,
       color: '#0064d7'
     },
     {
       name: "Premium Plan",
-      price: "₦250,000", 
-      description: "Maximum returns for serious investors",
-      features: ["1% monthly ROI", "18-month duration", "Full property ownership options", "Dedicated advisor", "Exclusive deals", "Legal support"],
+      price: "₦500,000+",
+      description: "Enterprise-level investment opportunities",
+      features: ["1.5% monthly ROI", "24-month duration", "Commercial property access", "Personal account manager", "Custom investment strategies", "Priority legal support"],
       popular: false,
       color: '#1976d2'
-    },
-    {
-      name: "Mega Plan",
-      price: "₦500,000+",
-      description: "Enterprise-level investment opportunities", 
-      features: ["1.5% monthly ROI", "24-month duration", "Commercial property access", "Personal account manager", "Custom investment strategies", "VIP treatment"],
-      popular: false,
-      color: '#0d47a1'
-    },
+    }
   ];
 
   return (
-    <Grid container spacing={4}>
+    <Grid container spacing={4} justifyContent="center">
       {plans.map((plan, index) => (
-        <Grid item xs={12} sm={6} lg={3} key={plan.name}>
+        <Grid item xs={12} sm={6} lg={4} key={plan.name}>
           <Card 
             sx={{ 
               height: '100%',

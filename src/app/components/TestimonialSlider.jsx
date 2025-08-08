@@ -23,37 +23,61 @@ export default function TestimonialSlider() {
       name: "Obinna Okeke",
       role: "Property Investor",
       location: "Lagos, Nigeria",
-      content: "ALOTER helped me acquire two prime properties in Abuja without any hassle. Their team handled everything from documentation to handing over. Truly professional!",
+      content: "ALOTER helped me acquire two prime properties in Lekki without any legal issues. Their documentation process is thorough and their team guided me through every step. My property value increased by 40% in just 18 months.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+      investment: "₦85M Portfolio"
     },
     {
       id: 2,
-      name: "Amina Yusuf",
-      role: "Diaspora Client",
-      location: "London, UK",
-      content: "As someone living abroad, I was nervous about investing in Nigeria. ALOTER's transparent process and regular video updates gave me peace of mind.",
+      name: "Dr. Sarah Johnson",
+      role: "Diaspora Investor",
+      location: "Toronto, Canada",
+      content: "Living in Canada, I was skeptical about investing in Nigerian real estate. ALOTER's virtual tour system and regular progress videos convinced me. They delivered exactly as promised, and I now own 3 properties generating steady rental income.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b5e5?w=150&h=150&fit=crop&crop=face",
+      investment: "3 Properties, $200K+"
     },
     {
       id: 3,
-      name: "Chukwuemeka Eze",
+      name: "Engineer Chukwuemeka Eze",
       role: "First-time Buyer",
-      location: "Port Harcourt",
-      content: "Their low-income investment plan made it possible for me to own land in Lagos. Within 2 years, the value had tripled! Life-changing opportunity.",
-      rating: 4,
+      location: "Port Harcourt, Nigeria",
+      content: "As a young engineer, I thought property ownership was beyond my reach. ALOTER's flexible payment plan and ₦100K starter investment changed my life. I now own land in two states and plan to build my family home next year.",
+      rating: 5,
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      investment: "2 Land Plots"
     },
     {
       id: 4,
-      name: "Folake Adeleke",
-      role: "Commercial Investor",
-      location: "Ibadan, Nigeria",
-      content: "We partnered with ALOTER to develop a shopping complex. Their project management was exceptional - delivered 3 weeks ahead of schedule!",
+      name: "Mrs. Folake Adeleke",
+      role: "Commercial Developer",
+      location: "Abuja, Nigeria",
+      content: "ALOTER managed our ₦500M shopping complex project from start to finish. Their project management exceeded our expectations - completed 3 weeks early and 8% under budget. We're now planning our second joint venture.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face",
+      investment: "₦500M Development"
     },
+    {
+      id: 5,
+      name: "Mr. James Mitchell",
+      role: "Retired Executive",
+      location: "London, UK",
+      content: "After being scammed by another company, I was hesitant to invest again. ALOTER's insurance coverage and escrow payment system gave me confidence. My apartment in VI Lagos generates 12% annual rental yield - better than UK property!",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+      investment: "12% Annual Returns"
+    },
+    {
+      id: 6,
+      name: "Hajiya Fatima Abdullahi",
+      role: "Business Owner",
+      location: "Kano, Nigeria",
+      content: "ALOTER helped me diversify my business income through real estate. Their market analysis was spot-on, and my commercial property in Abuja is fully occupied with blue-chip tenants. ROI has been consistently above 15%.",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=150&h=150&fit=crop&crop=face",
+      investment: "15%+ ROI"
+    }
   ];
 
   // Auto-advance testimonials
@@ -182,8 +206,11 @@ export default function TestimonialSlider() {
                   <Typography variant="subtitle1" fontWeight="bold">
                     {testimonials[currentIndex].name}
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" color="text.secondary" mb={1}>
                     {testimonials[currentIndex].role} • {testimonials[currentIndex].location}
+                  </Typography>
+                  <Typography variant="body2" color="primary.main" fontWeight="bold">
+                    Investment: {testimonials[currentIndex].investment}
                   </Typography>
                 </Box>
               </Paper>

@@ -25,9 +25,12 @@ import BrandLogo from './BrandLogo';
 const navItems = [
   { label: 'Home', href: '#home', icon: <HomeIcon /> },
   { label: 'About', href: '#about', icon: <InfoIcon /> },
+  { label: 'Search', href: '#property-search', icon: <BusinessIcon /> },
   { label: 'Properties', href: '#properties', icon: <BusinessIcon /> },
-  { label: 'Investment Plans', href: '#investment-plans', icon: <TrendingUpIcon /> },
-  { label: 'Testimonials', href: '#testimonials', icon: <StarIcon /> },
+  { label: 'Calculator', href: '#mortgage-calculator', icon: <TrendingUpIcon /> },
+  { label: 'Investment', href: '#investment-plans', icon: <TrendingUpIcon /> },
+  { label: 'Team', href: '#team', icon: <StarIcon /> },
+  { label: 'FAQ', href: '#faq', icon: <InfoIcon /> },
 ];
 
 export default function Navigation() {

@@ -86,7 +86,7 @@ export default function Hero() {
               textShadow: '1px 1px 3px rgba(0,0,0,0.7)',
             }}
           >
-            Turning your realty fantasies into reality
+            Your trusted partner in Nigerian real estate
           </Typography>
 
           <Typography 
