@@ -9,10 +9,8 @@ import DiasporaAssurance from './components/DiasporaAssurance';
 import PropertyGrid from './components/PropertyGrid';
 import PropertyMap from './components/PropertyMap';
 import Contact from './components/Contact';
-import BrandLogo from './components/BrandLogo';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Button from '@mui/material/Button';
+import Navigation from './components/Navigation';
+import NoSSR from './components/NoSSR';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
@@ -21,23 +19,8 @@ import './globals.css';
 export default function Home() {
   return (
     <>
-      {/* Navigation Bar */}
-      <AppBar position="sticky" elevation={1} sx={{ backgroundColor: 'background.paper', borderBottom: 1, borderColor: 'divider' }}>
-        <Container maxWidth="lg">
-          <Toolbar sx={{ px: { xs: 0 } }}>
-            <BrandLogo />
-            <Box sx={{ flexGrow: 1 }} />
-            <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1 }}>
-              <Button color="primary" href="#home" sx={{ color: 'text.primary' }}>Home</Button>
-              <Button color="primary" href="#about" sx={{ color: 'text.primary' }}>About</Button>
-              <Button color="primary" href="#properties" sx={{ color: 'text.primary' }}>Properties</Button>
-              <Button color="primary" href="#investment-plans" sx={{ color: 'text.primary' }}>Investment Plans</Button>
-              <Button color="primary" href="#testimonials" sx={{ color: 'text.primary' }}>Testimonials</Button>
-              <Button variant="contained" color="primary" href="#contact">Contact Us</Button>
-            </Box>
-          </Toolbar>
-        </Container>
-      </AppBar>
+      {/* Modern Navigation Bar */}
+      <Navigation />
 
       {/* Main Content */}
       <main>
@@ -76,22 +59,34 @@ export default function Home() {
         </section>
 
         {/* Stats Counter Section */}
-        <StatsCounter />
+        <NoSSR>
+          <StatsCounter />
+        </NoSSR>
 
         {/* Testimonials Section */}
         <section id="testimonials">
-          <TestimonialSlider />
+          <NoSSR>
+            <TestimonialSlider />
+          </NoSSR>
         </section>
 
         {/* Diaspora Assurance Section */}
-        <DiasporaAssurance />
-
-        {/* Property Map Section */}
-        <PropertyMap />
+        <NoSSR>
+          <DiasporaAssurance />
+        </NoSSR>
 
         {/* Contact Section */}
         <section id="contact">
-          <Contact />
+          <NoSSR>
+            <Contact />
+          </NoSSR>
+        </section>
+
+        {/* Property Map Section - Before Footer */}
+        <section id="property-map">
+          <NoSSR>
+            <PropertyMap />
+          </NoSSR>
         </section>
 
         {/* Footer */}

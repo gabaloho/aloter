@@ -12,57 +12,152 @@ export default function DiasporaAssurance() {
   const items = [
     {
       title: "Anti-Scam Protection",
-      description: "Verified property titles and escrow payment options for maximum security",
-      icon: <SecurityIcon sx={{ fontSize: 40, color: 'primary.main' }} />
+      description: "Verified property titles, legal documentation checks, and secure escrow payment options for maximum security in your investment journey.",
+      icon: <SecurityIcon sx={{ fontSize: 48, color: 'white' }} />
     },
     {
-      title: "Virtual Tours",
-      description: "360° property views and live video calls before making any commitment",
-      icon: <VideocamIcon sx={{ fontSize: 40, color: 'primary.main' }} />
+      title: "Virtual Tours & Inspection",
+      description: "360° property views, live video calls with agents, and detailed virtual walkthroughs before making any financial commitment.",
+      icon: <VideocamIcon sx={{ fontSize: 48, color: 'white' }} />
     },
     {
-      title: "Legal Support",
-      description: "Complete documentation assistance and government approval guidance",
-      icon: <GavelIcon sx={{ fontSize: 40, color: 'primary.main' }} />
+      title: "Legal & Documentation Support",
+      description: "Complete documentation assistance, government approval guidance, and legal support throughout your property acquisition process.",
+      icon: <GavelIcon sx={{ fontSize: 48, color: 'white' }} />
     }
   ];
 
   return (
-    <Box sx={{ backgroundColor: 'grey.100', py: 8 }}>
-      <Container maxWidth="lg">
-        <Box textAlign="center" mb={6}>
-          <Typography variant="h3" fontWeight="bold" color="text.primary" mb={2}>
-            Diaspora Investment Solutions
+    <Box 
+      sx={{ 
+        background: 'linear-gradient(135deg, #0064d7 0%, #004ba8 50%, #0064d7 100%)',
+        py: { xs: 6, md: 10 },
+        position: 'relative',
+        overflow: 'hidden',
+        '&::before': {
+          content: '""',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background: 'url("https://images.unsplash.com/photo-1577495508048-b635879837f1?w=1920&q=80") center/cover',
+          opacity: 0.1,
+          zIndex: 1,
+        }
+      }}
+    >
+      <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 2 }}>
+        {/* Header Section */}
+        <Box textAlign="center" mb={8}>
+          <Typography 
+            variant="h2" 
+            fontWeight="bold" 
+            sx={{ 
+              color: 'white',
+              mb: 2,
+              fontSize: { xs: '2.5rem', md: '3.5rem' },
+              textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
+            }}
+          >
+            🌍 Diaspora Investment Solutions
           </Typography>
-          <Typography variant="h6" color="text.secondary" maxWidth="md" mx="auto">
-            Specially designed services for our overseas investors to invest with confidence
+          <Typography 
+            variant="h5" 
+            sx={{ 
+              color: 'rgba(255,255,255,0.9)', 
+              maxWidth: '800px', 
+              mx: 'auto',
+              lineHeight: 1.6,
+              textShadow: '1px 1px 2px rgba(0,0,0,0.2)',
+            }}
+          >
+            Specially designed services for our overseas investors to invest with confidence from anywhere in the world
           </Typography>
         </Box>
         
-        <Grid container spacing={4}>
+        {/* Cards Section */}
+        <Grid container spacing={4} sx={{ mb: 8 }}>
           {items.map((item, index) => (
-            <Grid item xs={12} md={4} key={item.title}>
+            <Grid item xs={12} lg={4} key={item.title}>
               <Paper 
-                elevation={3} 
+                elevation={8} 
                 sx={{ 
-                  p: 4, 
+                  p: 5, 
                   height: '100%',
                   textAlign: 'center',
-                  borderRadius: 3,
-                  transition: 'all 0.3s ease-in-out',
+                  borderRadius: 4,
+                  background: 'linear-gradient(145deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 100%)',
+                  backdropFilter: 'blur(10px)',
+                  border: '1px solid rgba(255,255,255,0.2)',
+                  transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  '&::before': {
+                    content: '""',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    height: '4px',
+                    background: `linear-gradient(90deg, 
+                      ${index === 0 ? '#ff6b6b' : index === 1 ? '#4ecdc4' : '#45b7d1'} 0%, 
+                      ${index === 0 ? '#ee5a52' : index === 1 ? '#44a08d' : '#2196f3'} 100%
+                    )`,
+                  },
                   '&:hover': {
-                    transform: 'translateY(-8px)',
-                    boxShadow: '0 12px 24px rgba(0,0,0,0.15)',
+                    transform: 'translateY(-12px) scale(1.02)',
+                    boxShadow: '0 20px 40px rgba(0,0,0,0.2)',
+                    background: 'linear-gradient(145deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.95) 100%)',
                   }
                 }}
               >
-                <Box mb={3}>
+                {/* Icon Section */}
+                <Box 
+                  sx={{ 
+                    width: 80,
+                    height: 80,
+                    borderRadius: '50%',
+                    background: `linear-gradient(135deg, 
+                      ${index === 0 ? '#ff6b6b' : index === 1 ? '#4ecdc4' : '#45b7d1'} 0%, 
+                      ${index === 0 ? '#ee5a52' : index === 1 ? '#44a08d' : '#2196f3'} 100%
+                    )`,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    mx: 'auto',
+                    mb: 3,
+                    boxShadow: '0 8px 24px rgba(0,0,0,0.15)',
+                    transition: 'all 0.3s ease',
+                    '&:hover': {
+                      transform: 'rotate(10deg) scale(1.1)',
+                      boxShadow: '0 12px 32px rgba(0,0,0,0.2)',
+                    }
+                  }}
+                >
                   {item.icon}
                 </Box>
-                <Typography variant="h5" fontWeight="bold" mb={2} color="text.primary">
+
+                {/* Content */}
+                <Typography 
+                  variant="h4" 
+                  fontWeight="bold" 
+                  sx={{ 
+                    mb: 3,
+                    color: '#1a1a1a',
+                    fontSize: { xs: '1.5rem', md: '1.75rem' }
+                  }}
+                >
                   {item.title}
                 </Typography>
-                <Typography variant="body1" color="text.secondary" lineHeight={1.6}>
+                <Typography 
+                  variant="body1" 
+                  sx={{ 
+                    color: '#555',
+                    lineHeight: 1.8,
+                    fontSize: '1.1rem'
+                  }}
+                >
                   {item.description}
                 </Typography>
               </Paper>
@@ -70,37 +165,72 @@ export default function DiasporaAssurance() {
           ))}
         </Grid>
 
-        {/* CTA Section */}
-        <Box textAlign="center" mt={8}>
-          <Typography variant="h5" fontWeight="bold" mb={2} color="text.primary">
-            Ready to Invest from Abroad?
+        {/* Enhanced CTA Section */}
+        <Box 
+          textAlign="center" 
+          sx={{
+            backgroundColor: 'rgba(255,255,255,0.1)',
+            backdropFilter: 'blur(20px)',
+            borderRadius: 4,
+            p: 6,
+            border: '1px solid rgba(255,255,255,0.2)',
+          }}
+        >
+          <Typography 
+            variant="h3" 
+            fontWeight="bold" 
+            sx={{ 
+              mb: 2,
+              color: 'white',
+              textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
+            }}
+          >
+            Ready to Invest from Abroad? 🚀
           </Typography>
-          <Typography variant="body1" color="text.secondary" mb={4}>
-            Join thousands of diaspora investors who trust ALOTER with their real estate investments
+          <Typography 
+            variant="h6" 
+            sx={{ 
+              color: 'rgba(255,255,255,0.9)', 
+              mb: 5,
+              maxWidth: '600px',
+              mx: 'auto',
+              lineHeight: 1.7,
+            }}
+          >
+            Join thousands of diaspora investors who trust ALOTER with their real estate investments. 
+            Start your journey today with a free consultation.
           </Typography>
-          <Box display="flex" flexDirection={{ xs: 'column', sm: 'row' }} gap={2} justifyContent="center">
+          
+          <Box 
+            display="flex" 
+            flexDirection={{ xs: 'column', sm: 'row' }} 
+            gap={3} 
+            justifyContent="center"
+          >
             <Box
               component="a"
               href="#contact"
               sx={{
                 display: 'inline-block',
-                backgroundColor: 'primary.main',
-                color: 'white',
-                px: 4,
-                py: 2,
-                borderRadius: 2,
+                backgroundColor: 'white',
+                color: '#0064d7',
+                px: 6,
+                py: 3,
+                borderRadius: '50px',
                 textDecoration: 'none',
-                fontWeight: 600,
-                fontSize: '1.1rem',
-                transition: 'all 0.3s ease',
+                fontWeight: 700,
+                fontSize: '1.2rem',
+                minWidth: '200px',
+                boxShadow: '0 8px 24px rgba(0,0,0,0.15)',
+                transition: 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
                 '&:hover': {
-                  backgroundColor: 'primary.dark',
-                  transform: 'translateY(-2px)',
-                  boxShadow: '0 8px 20px rgba(0,100,215,0.3)',
+                  backgroundColor: '#f0f8ff',
+                  transform: 'translateY(-3px) scale(1.05)',
+                  boxShadow: '0 12px 32px rgba(0,0,0,0.2)',
                 }
               }}
             >
-              Schedule Consultation
+              📞 Schedule Free Consultation
             </Box>
             <Box
               component="a"
@@ -108,24 +238,25 @@ export default function DiasporaAssurance() {
               sx={{
                 display: 'inline-block',
                 backgroundColor: 'transparent',
-                color: 'primary.main',
-                border: '2px solid',
-                borderColor: 'primary.main',
-                px: 4,
-                py: 2,
-                borderRadius: 2,
+                color: 'white',
+                border: '2px solid white',
+                px: 6,
+                py: 3,
+                borderRadius: '50px',
                 textDecoration: 'none',
-                fontWeight: 600,
-                fontSize: '1.1rem',
-                transition: 'all 0.3s ease',
+                fontWeight: 700,
+                fontSize: '1.2rem',
+                minWidth: '200px',
+                transition: 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
                 '&:hover': {
-                  backgroundColor: 'primary.main',
-                  color: 'white',
-                  transform: 'translateY(-2px)',
+                  backgroundColor: 'white',
+                  color: '#0064d7',
+                  transform: 'translateY(-3px) scale(1.05)',
+                  boxShadow: '0 12px 32px rgba(255,255,255,0.3)',
                 }
               }}
             >
-              Browse Properties
+              🏘️ Browse Properties
             </Box>
           </Box>
         </Box>
