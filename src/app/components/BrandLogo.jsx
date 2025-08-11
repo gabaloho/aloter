@@ -32,9 +32,6 @@ export default function BrandLogo({ variant = 'desktop' }) {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          borderRadius: '50%',
-          backgroundColor: 'white',
-          padding: 1,
         }}
       >
         <Box
@@ -44,7 +41,7 @@ export default function BrandLogo({ variant = 'desktop' }) {
           sx={{
             width: '100%',
             height: '100%',
-            objectFit: 'contain'
+            objectFit: 'contain',
           }}
         />
       </Box>

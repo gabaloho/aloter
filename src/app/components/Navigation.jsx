@@ -10,42 +10,40 @@ import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import HomeIcon from '@mui/icons-material/Home';
-import InfoIcon from '@mui/icons-material/Info';
-import BusinessIcon from '@mui/icons-material/Business';
-import TrendingUpIcon from '@mui/icons-material/TrendingUp';
-import StarIcon from '@mui/icons-material/Star';
-import ContactMailIcon from '@mui/icons-material/ContactMail';
-import PhoneIcon from '@mui/icons-material/Phone';
 import BrandLogo from './BrandLogo';
 
 const navItems = [
-  { label: 'Home', href: '#home', icon: <HomeIcon /> },
-  { label: 'About', href: '#about', icon: <InfoIcon /> },
-  { label: 'Search', href: '#property-search', icon: <BusinessIcon /> },
-  { label: 'Properties', href: '#properties', icon: <BusinessIcon /> },
-  { label: 'Calculator', href: '#mortgage-calculator', icon: <TrendingUpIcon /> },
-  { label: 'Investment', href: '#investment-plans', icon: <TrendingUpIcon /> },
-  { label: 'Team', href: '#team', icon: <StarIcon /> },
-  { label: 'FAQ', href: '#faq', icon: <InfoIcon /> },
+  { label: 'Home', href: '#home' },
+  { label: 'About', href: '#about' },
+  { label: 'Properties', href: '#properties' },
+  { label: 'Services', href: '#services' },
+  { label: 'Contact', href: '#contact' },
 ];
 
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  // Fix hydration issues by ensuring component only renders after mount
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Handle scroll effect
   useEffect(() => {
+    if (!mounted) return;
+
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      const isScrolled = window.scrollY > 50;
+      setScrolled(isScrolled);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [mounted]);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -54,14 +52,103 @@ export default function Navigation() {
   const handleNavClick = (href) => {
     setMobileOpen(false);
     // Smooth scroll to section
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
+    if (typeof window !== 'undefined') {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
     }
   };
+
+  // Don't render until mounted to prevent hydration mismatch
+  if (!mounted) {
+    return (
+      <AppBar 
+        position="sticky" 
+        elevation={0}
+        sx={{ 
+          backgroundColor: 'grey.900',
+          borderBottom: '1px solid rgba(255,255,255,0.1)',
+        }}
+      >
+        <Container maxWidth="xl">
+          <Toolbar sx={{ 
+            px: { xs: 1, sm: 2 },
+            py: { xs: 0.5, sm: 1 },
+            minHeight: { xs: 64, sm: 72 }
+          }}>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <BrandLogo />
+            </Box>
+            <Box sx={{ flexGrow: 1 }} />
+            <Box sx={{ 
+              display: { xs: 'none', lg: 'flex' }, 
+              gap: 1,
+              alignItems: 'center'
+            }}>
+              {navItems.map((item) => (
+                <Button
+                  key={item.label}
+                  sx={{
+                    color: 'white',
+                    fontWeight: 500,
+                    fontSize: '1rem',
+                    px: 3,
+                    py: 1.5,
+                    textTransform: 'none',
+                  }}
+                >
+                  {item.label}
+                </Button>
+              ))}
+              <Button
+                variant="outlined"
+                sx={{
+                  ml: 2,
+                  px: 4,
+                  py: 1.5,
+                  fontSize: '0.95rem',
+                  fontWeight: 600,
+                  textTransform: 'none',
+                  borderColor: 'white',
+                  color: 'white',
+                }}
+              >
+                Call Now
+              </Button>
+              <Button
+                variant="contained"
+                sx={{
+                  ml: 1,
+                  px: 4,
+                  py: 1.5,
+                  fontSize: '0.95rem',
+                  fontWeight: 700,
+                  textTransform: 'none',
+                  background: 'linear-gradient(135deg, #0064d7 0%, #004ba8 100%)',
+                }}
+              >
+                Contact Us
+              </Button>
+            </Box>
+            <IconButton
+              sx={{
+                display: { xs: 'flex', lg: 'none' },
+                ml: 1,
+                backgroundColor: 'rgba(255,255,255,0.1)',
+                color: 'white',
+              }}
+            >
+              <MenuIcon />
+            </IconButton>
+          </Toolbar>
+        </Container>
+      </AppBar>
+    );
+  }
 
   const drawer = (
     <Box
@@ -99,7 +186,7 @@ export default function Navigation() {
             onClick={() => handleNavClick(item.href)}
             sx={{
               cursor: 'pointer',
-              mx: 1,
+              mx: 2,
               borderRadius: 2,
               mb: 1,
               transition: 'all 0.3s ease',
@@ -109,14 +196,12 @@ export default function Navigation() {
               }
             }}
           >
-            <ListItemIcon sx={{ color: 'white', minWidth: 40 }}>
-              {item.icon}
-            </ListItemIcon>
             <ListItemText 
               primary={item.label} 
               primaryTypographyProps={{
                 fontWeight: 600,
-                fontSize: '1.1rem'
+                fontSize: '1.1rem',
+                textAlign: 'left'
               }}
             />
           </ListItem>
@@ -129,7 +214,6 @@ export default function Navigation() {
           fullWidth
           variant="contained"
           onClick={() => handleNavClick('#contact')}
-          startIcon={<ContactMailIcon />}
           sx={{
             backgroundColor: 'white',
             color: 'primary.main',
@@ -137,6 +221,7 @@ export default function Navigation() {
             fontSize: '1.1rem',
             fontWeight: 700,
             borderRadius: 3,
+            textTransform: 'none',
             '&:hover': {
               backgroundColor: '#f5f5f5',
               transform: 'translateY(-2px)',
@@ -144,6 +229,31 @@ export default function Navigation() {
           }}
         >
           Contact Us
+        </Button>
+        
+        {/* Mobile Call Button */}
+        <Button
+          fullWidth
+          variant="outlined"
+          href="tel:+2341234567890"
+          sx={{
+            mt: 2,
+            borderColor: 'white',
+            color: 'white',
+            py: 1.5,
+            fontSize: '1rem',
+            fontWeight: 600,
+            borderRadius: 3,
+            textTransform: 'none',
+            borderWidth: 2,
+            '&:hover': {
+              backgroundColor: 'white',
+              color: 'primary.main',
+              borderColor: 'white',
+            }
+          }}
+        >
+          Call Now
         </Button>
       </Box>
     </Box>
@@ -179,19 +289,18 @@ export default function Navigation() {
             {/* Desktop Navigation */}
             <Box sx={{ 
               display: { xs: 'none', lg: 'flex' }, 
-              gap: 0.5,
+              gap: 1,
               alignItems: 'center'
             }}>
               {navItems.map((item) => (
                 <Button
                   key={item.label}
                   onClick={() => handleNavClick(item.href)}
-                  startIcon={item.icon}
                   sx={{
                     color: 'white',
-                    fontWeight: 600,
-                    fontSize: '0.95rem',
-                    px: 2.5,
+                    fontWeight: 500,
+                    fontSize: '1rem',
+                    px: 3,
                     py: 1.5,
                     borderRadius: 3,
                     textTransform: 'none',
@@ -223,13 +332,39 @@ export default function Navigation() {
                 </Button>
               ))}
               
+              {/* Call Now Button (Desktop) */}
+              <Button
+                href="tel:+2341234567890"
+                variant="outlined"
+                sx={{
+                  ml: 2,
+                  px: 4,
+                  py: 1.5,
+                  fontSize: '0.95rem',
+                  fontWeight: 600,
+                  borderRadius: 3,
+                  textTransform: 'none',
+                  borderColor: 'white',
+                  color: 'white',
+                  borderWidth: 2,
+                  transition: 'all 0.3s ease',
+                  '&:hover': {
+                    backgroundColor: 'white',
+                    color: 'grey.900',
+                    transform: 'translateY(-1px)',
+                    boxShadow: '0 4px 16px rgba(255,255,255,0.3)',
+                  }
+                }}
+              >
+                Call Now
+              </Button>
+
               {/* Contact Button */}
               <Button
                 onClick={() => handleNavClick('#contact')}
                 variant="contained"
-                startIcon={<PhoneIcon />}
                 sx={{
-                  ml: 2,
+                  ml: 1,
                   px: 4,
                   py: 1.5,
                   fontSize: '0.95rem',
@@ -247,34 +382,6 @@ export default function Navigation() {
                 }}
               >
                 Contact Us
-              </Button>
-
-              {/* Call Now Button (Desktop) */}
-              <Button
-                href="tel:+2341234567890"
-                variant="outlined"
-                startIcon={<PhoneIcon />}
-                sx={{
-                  ml: 1,
-                  px: 3,
-                  py: 1.5,
-                  fontSize: '0.9rem',
-                  fontWeight: 600,
-                  borderRadius: 3,
-                  textTransform: 'none',
-                  borderColor: 'white',
-                  color: 'white',
-                  borderWidth: 2,
-                  transition: 'all 0.3s ease',
-                  '&:hover': {
-                    backgroundColor: 'white',
-                    color: 'grey.900',
-                    transform: 'translateY(-1px)',
-                    boxShadow: '0 4px 16px rgba(255,255,255,0.3)',
-                  }
-                }}
-              >
-                Call Now
               </Button>
             </Box>
 

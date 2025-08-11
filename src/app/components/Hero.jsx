@@ -37,34 +37,6 @@ export default function Hero() {
       {/* Content */}
       <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2 }}>
         <Box textAlign="center" px={2}>
-          {/* Logo */}
-          <Box 
-            sx={{ 
-              width: 120, 
-              height: 120, 
-              backgroundColor: 'rgba(255,255,255,0.95)',
-              borderRadius: '50%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              margin: '0 auto 32px',
-              backdropFilter: 'blur(20px)',
-              border: '3px solid rgba(255,255,255,0.5)',
-              boxShadow: '0 8px 32px rgba(0,0,0,0.3)',
-              p: 2,
-            }}
-          >
-            <Image
-              src="/logo.svg"
-              alt="ALOTER REALTY LTD"
-              width={80}
-              height={80}
-              style={{ 
-                objectFit: 'contain',
-              }}
-            />
-          </Box>
-
           <Typography 
             variant="h4" 
             sx={{ 
