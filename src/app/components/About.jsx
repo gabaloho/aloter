@@ -16,38 +16,39 @@ import HandshakeIcon from '@mui/icons-material/Handshake';
 import NatureIcon from '@mui/icons-material/Nature';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import FlagIcon from '@mui/icons-material/Flag';
+import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 
 export default function About() {
   const fantasies = [
     {
       icon: <HomeIcon />,
-      title: "Perfect Property & Location",
-      description: "Finding the perfect property in the perfect location that matches your dreams and budget."
+      title: "Infrastructure Development",
+      description: "Financing sustainable infrastructure projects that create lasting value for communities while delivering strong returns."
     },
     {
       icon: <HandshakeIcon />,
-      title: "Trusted Partners",
-      description: "Finding a trusted developer/agent to make your realty journey seamless, peaceful and exciting."
+      title: "ESG-Compliant Partnerships",
+      description: "Building trusted partnerships with developers and investors who share our commitment to environmental and social responsibility."
     },
     {
       icon: <TrendingUpIcon />,
-      title: "Investment Opportunities",
-      description: "Low income earner but want to key into real estate investment? We've created a system for you to tap into endless financial opportunities."
+      title: "Sustainable Investment Solutions",
+      description: "Creating innovative financial products that enable investors to participate in Africa's infrastructure development while maintaining ESG standards."
     },
     {
       icon: <PublicIcon />,
-      title: "International Investment",
-      description: "Stay abroad and wish to invest in Nigeria? Been scammed before? We are here for you - you can trust us."
+      title: "International Capital Access",
+      description: "Connecting global investors with African infrastructure opportunities through transparent, ESG-compliant investment vehicles."
     }
   ];
 
   const services = [
-    { name: "Marketing", color: "primary" },
-    { name: "Development", color: "secondary" },
-    { name: "Management", color: "success" },
-    { name: "Appraisal", color: "info" },
-    { name: "Construction", color: "warning" },
-    { name: "Consultancy", color: "error" }
+    { name: "Infrastructure Finance", color: "primary" },
+    { name: "Project Finance", color: "secondary" },
+    { name: "Real Estate Development", color: "success" },
+    { name: "Asset Management", color: "info" },
+    { name: "Leasing Solutions", color: "warning" },
+    { name: "ESG Advisory", color: "error" }
   ];
 
   const values = [
@@ -60,6 +61,11 @@ export default function About() {
       icon: <NatureIcon />,
       title: "Sustainability",
       description: "Committed to environmentally responsible practices and sustainable development for future generations."
+    },
+    {
+      icon: <BusinessCenterIcon />,
+      title: "ESG Excellence",
+      description: "Fully integrated Environmental, Social, and Governance principles guide every investment and development decision."
     }
   ];
 
@@ -68,42 +74,43 @@ export default function About() {
       <Container maxWidth="lg">
         {/* Section Header */}
         <Box textAlign="center" mb={8}>
-          <Typography 
-            variant="h3" 
-            fontWeight="bold" 
+          <Typography
+            variant="h3"
+            fontWeight="bold"
             gutterBottom
             sx={{ color: 'primary.main' }}
           >
             About Us: It's Actually About You!
           </Typography>
-          <Typography 
-            variant="h5" 
-            color="text.secondary" 
+          <Typography
+            variant="h5"
+            color="text.secondary"
             sx={{ maxWidth: 'md', mx: 'auto', lineHeight: 1.6 }}
           >
-            Our core of existence is centered on taking you by the hand, to walk you through the 
-            process of turning your realty fantasies into a reality.
+            Our core of existence is centered on driving sustainable infrastructure development
+            and providing innovative financial solutions that create lasting value for communities
+            while maintaining the highest ESG standards.
           </Typography>
         </Box>
 
         {/* Your Fantasies Section */}
         <Box mb={10}>
-          <Typography 
-            variant="h4" 
-            fontWeight="bold" 
-            textAlign="center" 
+          <Typography
+            variant="h4"
+            fontWeight="bold"
+            textAlign="center"
             gutterBottom
             sx={{ mb: 4 }}
           >
-            Your Realty Fantasies Could Be...
+            Your Infrastructure & Development Needs Could Be...
           </Typography>
           <Grid container spacing={4}>
             {fantasies.map((fantasy, index) => (
               <Grid item xs={12} md={6} key={index}>
-                <Paper 
-                  elevation={3} 
-                  sx={{ 
-                    p: 4, 
+                <Paper
+                  elevation={3}
+                  sx={{
+                    p: 4,
                     height: '100%',
                     borderRadius: 3,
                     transition: 'transform 0.3s ease-in-out',
@@ -114,11 +121,11 @@ export default function About() {
                   }}
                 >
                   <Box display="flex" alignItems="flex-start" gap={2}>
-                    <Box 
-                      sx={{ 
-                        backgroundColor: 'primary.main', 
-                        color: 'white', 
-                        p: 1.5, 
+                    <Box
+                      sx={{
+                        backgroundColor: 'primary.main',
+                        color: 'white',
+                        p: 1.5,
                         borderRadius: '50%',
                         minWidth: 48,
                         height: 48,
@@ -148,10 +155,10 @@ export default function About() {
         <Grid container spacing={6} mb={8}>
           {/* Mission */}
           <Grid item xs={12} lg={6}>
-            <Paper 
-              elevation={4} 
-              sx={{ 
-                p: 4, 
+            <Paper
+              elevation={4}
+              sx={{
+                p: 4,
                 height: '100%',
                 borderRadius: 3,
                 backgroundColor: 'primary.main',
@@ -165,24 +172,25 @@ export default function About() {
                 </Typography>
               </Box>
               <Typography variant="body1" sx={{ lineHeight: 1.8, mb: 3 }}>
-                With the ever growing African Population, we at ALOTER understand that providing 
-                shelter for the populace is crucial. Hence, we are committed to providing affordable 
-                landed properties for individuals who want to own a home, and also helping real estate 
-                investors make the best of their investments.
+                GUE REALTY LIMITED is committed to driving sustainable development across Africa through innovative
+                infrastructure finance, real estate development, and asset management solutions. We focus on
+                projects that create lasting value for communities while delivering strong returns for investors,
+                all while maintaining the highest ESG standards.
               </Typography>
               <Typography variant="body1" sx={{ lineHeight: 1.8, fontStyle: 'italic' }}>
-                With our expertise and trained personnel working round the clock to ensure we offer 
-                top notch, tailored and client centric solutions, your ride with us is a sure smooth one.
+                Our integrated approach to Infrastructure & Project Finance, Real Estate Development, and
+                Leasing & Asset Finance enables us to deliver comprehensive solutions that address Africa's
+                infrastructure needs while promoting environmental sustainability and social responsibility.
               </Typography>
             </Paper>
           </Grid>
 
           {/* Vision */}
           <Grid item xs={12} lg={6}>
-            <Paper 
-              elevation={4} 
-              sx={{ 
-                p: 4, 
+            <Paper
+              elevation={4}
+              sx={{
+                p: 4,
                 height: '100%',
                 borderRadius: 3,
                 backgroundColor: 'secondary.main',
@@ -196,8 +204,9 @@ export default function About() {
                 </Typography>
               </Box>
               <Typography variant="body1" sx={{ lineHeight: 1.8 }}>
-                To take the lead in providing sustainable real estate solutions. Helping address 
-                housing deficit, rebuilding trust and maintaining global industry best practices.
+                To be Africa's leading ESG-compliant infrastructure and development finance company,
+                creating sustainable communities and driving economic growth through innovative
+                financial solutions and responsible development practices that benefit all stakeholders.
               </Typography>
             </Paper>
           </Grid>
@@ -205,10 +214,10 @@ export default function About() {
 
         {/* Services Section */}
         <Box mb={8}>
-          <Typography 
-            variant="h4" 
-            fontWeight="bold" 
-            textAlign="center" 
+          <Typography
+            variant="h4"
+            fontWeight="bold"
+            textAlign="center"
             gutterBottom
             sx={{ mb: 4 }}
           >
@@ -240,10 +249,10 @@ export default function About() {
 
         {/* Values Section */}
         <Box>
-          <Typography 
-            variant="h4" 
-            fontWeight="bold" 
-            textAlign="center" 
+          <Typography
+            variant="h4"
+            fontWeight="bold"
+            textAlign="center"
             gutterBottom
             sx={{ mb: 4 }}
           >
@@ -252,21 +261,21 @@ export default function About() {
           <Grid container spacing={4}>
             {values.map((value, index) => (
               <Grid item xs={12} md={6} key={index}>
-                <Paper 
-                  elevation={3} 
-                  sx={{ 
-                    p: 4, 
+                <Paper
+                  elevation={3}
+                  sx={{
+                    p: 4,
                     height: '100%',
                     borderRadius: 3,
                     textAlign: 'center',
                     backgroundColor: 'grey.50'
                   }}
                 >
-                  <Box 
-                    sx={{ 
-                      backgroundColor: 'primary.main', 
-                      color: 'white', 
-                      p: 2, 
+                  <Box
+                    sx={{
+                      backgroundColor: 'primary.main',
+                      color: 'white',
+                      p: 2,
                       borderRadius: '50%',
                       width: 80,
                       height: 80,

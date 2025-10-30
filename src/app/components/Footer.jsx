@@ -1,11 +1,11 @@
 "use client";
 
-import { 
-  Box, 
-  Container, 
-  Typography, 
-  Grid, 
-  Link 
+import {
+  Box,
+  Container,
+  Typography,
+  Grid,
+  Link
 } from '@mui/material';
 import { Facebook, Twitter, Instagram, LinkedIn, WhatsApp } from '@mui/icons-material';
 
@@ -16,14 +16,14 @@ export default function Footer() {
         <Grid container spacing={4}>
           {/* Company Info */}
           <Grid size={{ xs: 12, md: 4 }}>
-            <Box sx={{ 
-              display: 'flex', 
-              alignItems: 'center', 
+            <Box sx={{
+              display: 'flex',
+              alignItems: 'center',
               mb: 3
             }}>
-              <Box sx={{ 
-                width: 60, 
-                height: 60, 
+              <Box sx={{
+                width: 60,
+                height: 60,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -31,8 +31,8 @@ export default function Footer() {
               }}>
                 <Box
                   component="img"
-                  src="/logo.svg"
-                  alt="ALOTER REALTY LTD"
+                  src="/logo.png"
+                  alt="GUE REALTY LIMITED"
                   sx={{
                     width: '100%',
                     height: '100%',
@@ -42,10 +42,10 @@ export default function Footer() {
               </Box>
               <Box>
                 <Typography variant="h6" fontWeight="bold">
-                  ALOTER REALTY LTD
+                  GUE REALTY LIMITED
                 </Typography>
                 <Typography variant="body2" sx={{ opacity: 0.8 }}>
-                  Turning your realty fantasies into reality
+                  Sustainable Infrastructure Finance & ESG-Compliant Development
                 </Typography>
               </Box>
             </Box>
@@ -84,60 +84,60 @@ export default function Footer() {
               Follow Us
             </Typography>
             <Box sx={{ display: 'flex', gap: 2, mb: 3 }}>
-              <Link 
-                href="https://facebook.com/aloterrealty" 
-                target="_blank" 
+              <Link
+                href="https://facebook.com/guerealtyltd"
+                target="_blank"
                 rel="noopener noreferrer"
-                sx={{ 
-                  color: 'inherit', 
+                sx={{
+                  color: 'inherit',
                   '&:hover': { color: '#1877F2' },
                   transition: 'color 0.2s ease'
                 }}
               >
                 <Facebook />
               </Link>
-              <Link 
-                href="https://twitter.com/aloterrealty" 
-                target="_blank" 
+              <Link
+                href="https://twitter.com/guerealtyltd"
+                target="_blank"
                 rel="noopener noreferrer"
-                sx={{ 
-                  color: 'inherit', 
+                sx={{
+                  color: 'inherit',
                   '&:hover': { color: '#1DA1F2' },
                   transition: 'color 0.2s ease'
                 }}
               >
                 <Twitter />
               </Link>
-              <Link 
-                href="https://instagram.com/aloterrealty" 
-                target="_blank" 
+              <Link
+                href="https://instagram.com/guerealtyltd"
+                target="_blank"
                 rel="noopener noreferrer"
-                sx={{ 
-                  color: 'inherit', 
+                sx={{
+                  color: 'inherit',
                   '&:hover': { color: '#E4405F' },
                   transition: 'color 0.2s ease'
                 }}
               >
                 <Instagram />
               </Link>
-              <Link 
-                href="https://linkedin.com/company/aloterrealty" 
-                target="_blank" 
+              <Link
+                href="https://linkedin.com/company/guerealtyltd"
+                target="_blank"
                 rel="noopener noreferrer"
-                sx={{ 
-                  color: 'inherit', 
+                sx={{
+                  color: 'inherit',
                   '&:hover': { color: '#0A66C2' },
                   transition: 'color 0.2s ease'
                 }}
               >
                 <LinkedIn />
               </Link>
-              <Link 
-                href="https://wa.me/1234567890" 
-                target="_blank" 
+              <Link
+                href="https://wa.me/1234567890"
+                target="_blank"
                 rel="noopener noreferrer"
-                sx={{ 
-                  color: 'inherit', 
+                sx={{
+                  color: 'inherit',
                   '&:hover': { color: '#25D366' },
                   transition: 'color 0.2s ease'
                 }}
@@ -146,10 +146,10 @@ export default function Footer() {
               </Link>
             </Box>
             <Typography variant="body2" sx={{ opacity: 0.8, mb: 1 }}>
-              Email: info@aloterrealty.com
+              Email: info@guerealtyltd.com
             </Typography>
             <Typography variant="body2" sx={{ opacity: 0.8 }}>
-              Phone: +234 XXX XXX XXXX
+              Phone: +234 704 695 2003
             </Typography>
           </Grid>
         </Grid>
@@ -157,7 +157,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <Box sx={{ borderTop: '1px solid rgba(255,255,255,0.1)', mt: 4, pt: 3, textAlign: 'center' }}>
           <Typography variant="body2" sx={{ opacity: 0.8, mb: 1 }}>
-            © 2025 ALOTER REALTY LTD. All rights reserved.
+            © 2025 GUE REALTY LIMITED. All rights reserved.
           </Typography>
           <Typography variant="body2" sx={{ opacity: 0.8 }}>
             RC Number: 8371222 | Licensed Real Estate Company | Insured & Bonded

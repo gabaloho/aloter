@@ -28,8 +28,8 @@ export default function DiasporaAssurance() {
   ];
 
   return (
-    <Box 
-      sx={{ 
+    <Box
+      sx={{
         background: 'linear-gradient(135deg, #0064d7 0%, #004ba8 50%, #0064d7 100%)',
         py: { xs: 6, md: 10 },
         position: 'relative',
@@ -50,40 +50,40 @@ export default function DiasporaAssurance() {
       <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 2 }}>
         {/* Header Section */}
         <Box textAlign="center" mb={8}>
-          <Typography 
-            variant="h2" 
-            fontWeight="bold" 
-            sx={{ 
+          <Typography
+            variant="h2"
+            fontWeight="bold"
+            sx={{
               color: 'white',
               mb: 2,
               fontSize: { xs: '2.5rem', md: '3.5rem' },
               textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
             }}
           >
-            🌍 Diaspora Investment Solutions
+            🌍 Global ESG Infrastructure Investment
           </Typography>
-          <Typography 
-            variant="h5" 
-            sx={{ 
-              color: 'rgba(255,255,255,0.9)', 
-              maxWidth: '800px', 
+          <Typography
+            variant="h5"
+            sx={{
+              color: 'rgba(255,255,255,0.9)',
+              maxWidth: '800px',
               mx: 'auto',
               lineHeight: 1.6,
               textShadow: '1px 1px 2px rgba(0,0,0,0.2)',
             }}
           >
-            Specially designed services for our overseas investors to invest with confidence from anywhere in the world
+            Comprehensive ESG-compliant infrastructure finance and development solutions for international investors seeking sustainable returns
           </Typography>
         </Box>
-        
+
         {/* Cards Section */}
         <Grid container spacing={4} sx={{ mb: 8 }}>
           {items.map((item, index) => (
             <Grid item xs={12} lg={4} key={item.title}>
-              <Paper 
-                elevation={8} 
-                sx={{ 
-                  p: 5, 
+              <Paper
+                elevation={8}
+                sx={{
+                  p: 5,
                   height: '100%',
                   textAlign: 'center',
                   borderRadius: 4,
@@ -113,8 +113,8 @@ export default function DiasporaAssurance() {
                 }}
               >
                 {/* Icon Section */}
-                <Box 
-                  sx={{ 
+                <Box
+                  sx={{
                     width: 80,
                     height: 80,
                     borderRadius: '50%',
@@ -139,10 +139,10 @@ export default function DiasporaAssurance() {
                 </Box>
 
                 {/* Content */}
-                <Typography 
-                  variant="h4" 
-                  fontWeight="bold" 
-                  sx={{ 
+                <Typography
+                  variant="h4"
+                  fontWeight="bold"
+                  sx={{
                     mb: 3,
                     color: '#1a1a1a',
                     fontSize: { xs: '1.5rem', md: '1.75rem' }
@@ -150,9 +150,9 @@ export default function DiasporaAssurance() {
                 >
                   {item.title}
                 </Typography>
-                <Typography 
-                  variant="body1" 
-                  sx={{ 
+                <Typography
+                  variant="body1"
+                  sx={{
                     color: '#555',
                     lineHeight: 1.8,
                     fontSize: '1.1rem'
@@ -166,8 +166,8 @@ export default function DiasporaAssurance() {
         </Grid>
 
         {/* Enhanced CTA Section */}
-        <Box 
-          textAlign="center" 
+        <Box
+          textAlign="center"
           sx={{
             backgroundColor: 'rgba(255,255,255,0.1)',
             backdropFilter: 'blur(20px)',
@@ -176,10 +176,10 @@ export default function DiasporaAssurance() {
             border: '1px solid rgba(255,255,255,0.2)',
           }}
         >
-          <Typography 
-            variant="h3" 
-            fontWeight="bold" 
-            sx={{ 
+          <Typography
+            variant="h3"
+            fontWeight="bold"
+            sx={{
               mb: 2,
               color: 'white',
               textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
@@ -187,24 +187,24 @@ export default function DiasporaAssurance() {
           >
             Ready to Invest from Abroad? 🚀
           </Typography>
-          <Typography 
-            variant="h6" 
-            sx={{ 
-              color: 'rgba(255,255,255,0.9)', 
+          <Typography
+            variant="h6"
+            sx={{
+              color: 'rgba(255,255,255,0.9)',
               mb: 5,
               maxWidth: '600px',
               mx: 'auto',
               lineHeight: 1.7,
             }}
           >
-            Join thousands of diaspora investors who trust ALOTER with their real estate investments. 
-            Start your journey today with a free consultation.
+            Join global investors who trust GUE REALTY LIMITED with their ESG-compliant infrastructure and development finance needs.
+            Start your sustainable investment journey today with a comprehensive consultation.
           </Typography>
-          
-          <Box 
-            display="flex" 
-            flexDirection={{ xs: 'column', sm: 'row' }} 
-            gap={3} 
+
+          <Box
+            display="flex"
+            flexDirection={{ xs: 'column', sm: 'row' }}
+            gap={3}
             justifyContent="center"
           >
             <Box

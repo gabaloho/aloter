@@ -124,8 +124,8 @@ export default function CompanyCredentials() {
   ];
 
   return (
-    <Box 
-      sx={{ 
+    <Box
+      sx={{
         py: { xs: 8, md: 12 },
         background: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)',
         position: 'relative',
@@ -135,10 +135,10 @@ export default function CompanyCredentials() {
       <Container maxWidth="xl">
         {/* Header Section */}
         <Box textAlign="center" mb={8}>
-          <Typography 
-            variant="h2" 
-            fontWeight="bold" 
-            sx={{ 
+          <Typography
+            variant="h2"
+            fontWeight="bold"
+            sx={{
               mb: 2,
               background: 'linear-gradient(135deg, #0064d7 0%, #004ba8 100%)',
               backgroundClip: 'text',
@@ -150,17 +150,17 @@ export default function CompanyCredentials() {
           >
             🏛️ Company Credentials & Trust
           </Typography>
-          <Typography 
-            variant="h5" 
-            color="text.secondary" 
-            sx={{ 
-              maxWidth: '800px', 
+          <Typography
+            variant="h5"
+            color="text.secondary"
+            sx={{
+              maxWidth: '800px',
               mx: 'auto',
               lineHeight: 1.6,
               fontSize: { xs: '1.2rem', md: '1.5rem' }
             }}
           >
-            Your peace of mind is our priority. See why thousands of clients trust ALOTER Realty with their investments.
+            Your peace of mind is our priority. See why thousands of clients trust GUE REALTY LIMITED with their investments.
           </Typography>
         </Box>
 
@@ -172,9 +172,9 @@ export default function CompanyCredentials() {
           <Grid container spacing={4}>
             {registrations.map((reg, index) => (
               <Grid item xs={12} md={6} key={index}>
-                <Card 
+                <Card
                   elevation={6}
-                  sx={{ 
+                  sx={{
                     height: '100%',
                     borderRadius: 3,
                     transition: 'all 0.3s ease',
@@ -186,8 +186,8 @@ export default function CompanyCredentials() {
                 >
                   <CardContent sx={{ p: 4 }}>
                     <Stack direction="row" alignItems="flex-start" spacing={3}>
-                      <Box 
-                        sx={{ 
+                      <Box
+                        sx={{
                           backgroundColor: 'primary.main',
                           color: 'white',
                           p: 2,
@@ -208,9 +208,9 @@ export default function CompanyCredentials() {
                         <Typography variant="body1" color="primary.main" fontWeight="bold" gutterBottom>
                           {reg.number}
                         </Typography>
-                        <Chip 
-                          label={reg.status} 
-                          color="success" 
+                        <Chip
+                          label={reg.status}
+                          color="success"
                           size="small"
                           icon={<VerifiedIcon />}
                           sx={{ mb: 2 }}
@@ -280,9 +280,9 @@ export default function CompanyCredentials() {
           <Grid container spacing={3}>
             {awards.map((award, index) => (
               <Grid item xs={12} sm={6} lg={3} key={index}>
-                <Card 
+                <Card
                   elevation={4}
-                  sx={{ 
+                  sx={{
                     textAlign: 'center',
                     borderRadius: 3,
                     transition: 'all 0.3s ease',
@@ -317,12 +317,12 @@ export default function CompanyCredentials() {
             {partnerships.map((partner, index) => (
               <Grid item xs={12} sm={6} lg={3} key={index}>
                 <Box textAlign="center">
-                  <Avatar 
+                  <Avatar
                     src={partner.logo}
-                    sx={{ 
-                      width: 80, 
-                      height: 80, 
-                      mx: 'auto', 
+                    sx={{
+                      width: 80,
+                      height: 80,
+                      mx: 'auto',
                       mb: 2,
                       backgroundColor: 'white',
                       border: '3px solid rgba(255,255,255,0.3)'
@@ -331,9 +331,9 @@ export default function CompanyCredentials() {
                   <Typography variant="h6" fontWeight="bold" gutterBottom>
                     {partner.name}
                   </Typography>
-                  <Chip 
-                    label={partner.type} 
-                    variant="outlined" 
+                  <Chip
+                    label={partner.type}
+                    variant="outlined"
                     sx={{ color: 'white', borderColor: 'rgba(255,255,255,0.5)' }}
                   />
                 </Box>
@@ -344,10 +344,10 @@ export default function CompanyCredentials() {
 
         {/* Trust Guarantee */}
         <Box textAlign="center" mt={8}>
-          <Paper 
+          <Paper
             elevation={6}
-            sx={{ 
-              p: 6, 
+            sx={{
+              p: 6,
               borderRadius: 4,
               background: 'linear-gradient(145deg, rgba(76,175,80,0.1) 0%, rgba(76,175,80,0.05) 100%)',
               border: '2px solid',
@@ -359,7 +359,7 @@ export default function CompanyCredentials() {
               100% Verified & Trusted
             </Typography>
             <Typography variant="h6" color="text.secondary" sx={{ maxWidth: '800px', mx: 'auto' }}>
-              Every certification, registration, and partnership displayed here is verified and current. 
+              Every certification, registration, and partnership displayed here is verified and current.
               Your investment is protected by our comprehensive insurance coverage and regulatory compliance.
             </Typography>
           </Paper>

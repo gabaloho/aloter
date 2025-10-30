@@ -96,18 +96,18 @@ export default function NewsletterSignup() {
 
   if (submitted) {
     return (
-      <Box 
-        sx={{ 
+      <Box
+        sx={{
           py: { xs: 8, md: 12 },
           background: 'linear-gradient(135deg, #4caf50 0%, #388e3c 100%)',
           color: 'white'
         }}
       >
         <Container maxWidth="md">
-          <Paper 
+          <Paper
             elevation={8}
-            sx={{ 
-              p: 8, 
+            sx={{
+              p: 8,
               textAlign: 'center',
               borderRadius: 4,
               background: 'rgba(255,255,255,0.95)'
@@ -115,7 +115,7 @@ export default function NewsletterSignup() {
           >
             <Box sx={{ fontSize: '4rem', mb: 3 }}>🎉</Box>
             <Typography variant="h3" fontWeight="bold" gutterBottom color="success.main">
-              Welcome to ALOTER Insights!
+              Welcome to GUE REALTY Insights!
             </Typography>
             <Typography variant="h6" color="text.secondary" sx={{ mb: 4 }}>
               Thank you for subscribing! You'll receive your first newsletter within 24 hours with the latest market insights and investment opportunities.
@@ -135,8 +135,8 @@ export default function NewsletterSignup() {
   }
 
   return (
-    <Box 
-      sx={{ 
+    <Box
+      sx={{
         py: { xs: 8, md: 12 },
         background: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)',
         position: 'relative',
@@ -146,10 +146,10 @@ export default function NewsletterSignup() {
       <Container maxWidth="xl">
         {/* Header Section */}
         <Box textAlign="center" mb={8}>
-          <Typography 
-            variant="h2" 
-            fontWeight="bold" 
-            sx={{ 
+          <Typography
+            variant="h2"
+            fontWeight="bold"
+            sx={{
               mb: 2,
               background: 'linear-gradient(135deg, #0064d7 0%, #004ba8 100%)',
               backgroundClip: 'text',
@@ -159,13 +159,13 @@ export default function NewsletterSignup() {
               fontSize: { xs: '2.5rem', md: '3.5rem' }
             }}
           >
-            📧 Stay Informed with ALOTER Insights
+            📧 Stay Informed with GUE REALTY Insights
           </Typography>
-          <Typography 
-            variant="h5" 
-            color="text.secondary" 
-            sx={{ 
-              maxWidth: '800px', 
+          <Typography
+            variant="h5"
+            color="text.secondary"
+            sx={{
+              maxWidth: '800px',
               mx: 'auto',
               lineHeight: 1.6,
               fontSize: { xs: '1.2rem', md: '1.5rem' }
@@ -181,14 +181,14 @@ export default function NewsletterSignup() {
             <Typography variant="h4" fontWeight="bold" gutterBottom sx={{ mb: 4 }}>
               What You'll Receive
             </Typography>
-            
+
             <Stack spacing={3} mb={4}>
               {benefits.map((benefit, index) => (
                 <Card key={index} elevation={2} sx={{ borderRadius: 3 }}>
                   <CardContent sx={{ p: 3 }}>
                     <Stack direction="row" alignItems="flex-start" spacing={3}>
-                      <Box 
-                        sx={{ 
+                      <Box
+                        sx={{
                           backgroundColor: 'primary.main',
                           color: 'white',
                           p: 2,
@@ -218,7 +218,7 @@ export default function NewsletterSignup() {
 
             <Alert severity="info" sx={{ borderRadius: 2 }}>
               <Typography variant="body2">
-                📊 <strong>Join 10,000+ investors</strong> who already receive our weekly insights. 
+                📊 <strong>Join 10,000+ investors</strong> who already receive our weekly insights.
                 Unsubscribe anytime with one click.
               </Typography>
             </Alert>
@@ -317,7 +317,7 @@ export default function NewsletterSignup() {
                           onClick={() => handleInterestChange(option.id)}
                           variant={formData.interests.includes(option.id) ? 'filled' : 'outlined'}
                           color={formData.interests.includes(option.id) ? 'primary' : 'default'}
-                          sx={{ 
+                          sx={{
                             cursor: 'pointer',
                             '& .MuiChip-icon': { fontSize: '1rem' }
                           }}
@@ -342,14 +342,14 @@ export default function NewsletterSignup() {
                         mt: 2
                       }}
                     >
-                      Subscribe to ALOTER Insights
+                      Subscribe to GUE REALTY Insights
                     </Button>
                   </Grid>
 
                   {/* Privacy Note */}
                   <Grid item xs={12}>
                     <Typography variant="body2" color="text.secondary" textAlign="center">
-                      🔒 Your privacy is important to us. We'll never share your email with third parties. 
+                      🔒 Your privacy is important to us. We'll never share your email with third parties.
                       View our <strong>Privacy Policy</strong> for more details.
                     </Typography>
                   </Grid>

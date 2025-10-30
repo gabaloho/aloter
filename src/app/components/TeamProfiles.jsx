@@ -35,7 +35,7 @@ export default function TeamProfiles() {
         "Certified Real Estate Professional (CREP)",
         "Featured in Top 40 Under 40 Real Estate Leaders"
       ],
-      email: "gabriel@aloterrealty.com",
+      email: "gabriel@guerealtyltd.com",
       phone: "+234 803 123 4567",
       linkedin: "gabriel-aloho"
     },
@@ -52,7 +52,7 @@ export default function TeamProfiles() {
         "Certified Sales Professional (CSP)",
         "Built network of 5000+ satisfied clients"
       ],
-      email: "adebayo@aloterrealty.com",
+      email: "adebayo@guerealtyltd.com",
       phone: "+234 806 234 5678",
       linkedin: "adebayo-johnson"
     },
@@ -69,7 +69,7 @@ export default function TeamProfiles() {
         "Member, Nigerian Bar Association",
         "Zero legal disputes in client transactions"
       ],
-      email: "fatima@aloterrealty.com",
+      email: "fatima@guerealtyltd.com",
       phone: "+234 809 345 6789",
       linkedin: "fatima-abdullahi"
     },
@@ -86,7 +86,7 @@ export default function TeamProfiles() {
         "Certified Project Management Professional (PMP)",
         "100% on-time project delivery record"
       ],
-      email: "chidubem@aloterrealty.com",
+      email: "chidubem@guerealtyltd.com",
       phone: "+234 802 456 7890",
       linkedin: "chidubem-okafor"
     },
@@ -103,7 +103,7 @@ export default function TeamProfiles() {
         "Fluent in English, French, and Yoruba",
         "Established partnerships in 15+ countries"
       ],
-      email: "kemi@aloterrealty.com",
+      email: "kemi@guerealtyltd.com",
       phone: "+234 807 567 8901",
       linkedin: "kemi-adeyemi"
     },
@@ -120,7 +120,7 @@ export default function TeamProfiles() {
         "Managed ₦30B+ investment portfolio",
         "Published author on Nigerian real estate investment"
       ],
-      email: "mohammed@aloterrealty.com",
+      email: "mohammed@guerealtyltd.com",
       phone: "+234 805 678 9012",
       linkedin: "mohammed-yusuf"
     }
@@ -132,8 +132,8 @@ export default function TeamProfiles() {
   };
 
   return (
-    <Box 
-      sx={{ 
+    <Box
+      sx={{
         py: { xs: 8, md: 12 },
         background: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)',
         position: 'relative',
@@ -154,10 +154,10 @@ export default function TeamProfiles() {
       <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 2 }}>
         {/* Header Section */}
         <Box textAlign="center" mb={8}>
-          <Typography 
-            variant="h2" 
-            fontWeight="bold" 
-            sx={{ 
+          <Typography
+            variant="h2"
+            fontWeight="bold"
+            sx={{
               mb: 2,
               background: 'linear-gradient(135deg, #0064d7 0%, #004ba8 100%)',
               backgroundClip: 'text',
@@ -169,11 +169,11 @@ export default function TeamProfiles() {
           >
             👥 Meet Our Expert Team
           </Typography>
-          <Typography 
-            variant="h5" 
-            color="text.secondary" 
-            sx={{ 
-              maxWidth: '800px', 
+          <Typography
+            variant="h5"
+            color="text.secondary"
+            sx={{
+              maxWidth: '800px',
               mx: 'auto',
               lineHeight: 1.6,
               fontSize: { xs: '1.2rem', md: '1.5rem' }
@@ -187,9 +187,9 @@ export default function TeamProfiles() {
         <Grid container spacing={4}>
           {teamMembers.map((member, index) => (
             <Grid item xs={12} md={6} lg={4} key={member.id}>
-              <Card 
+              <Card
                 elevation={8}
-                sx={{ 
+                sx={{
                   height: '100%',
                   borderRadius: 4,
                   transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
@@ -235,33 +235,33 @@ export default function TeamProfiles() {
                     <Typography variant="h5" fontWeight="bold" gutterBottom>
                       {member.name}
                     </Typography>
-                    <Typography 
-                      variant="body1" 
-                      color="primary.main" 
+                    <Typography
+                      variant="body1"
+                      color="primary.main"
                       fontWeight="medium"
                       sx={{ mb: 2 }}
                     >
                       {member.position}
                     </Typography>
-                    
+
                     {/* Contact Info */}
                     <Stack direction="row" justifyContent="center" spacing={1}>
-                      <IconButton 
-                        size="small" 
+                      <IconButton
+                        size="small"
                         color="primary"
                         href={`mailto:${member.email}`}
                       >
                         <EmailIcon />
                       </IconButton>
-                      <IconButton 
-                        size="small" 
+                      <IconButton
+                        size="small"
                         color="primary"
                         href={`tel:${member.phone}`}
                       >
                         <PhoneIcon />
                       </IconButton>
-                      <IconButton 
-                        size="small" 
+                      <IconButton
+                        size="small"
                         color="primary"
                         href={`https://linkedin.com/in/${member.linkedin}`}
                         target="_blank"
@@ -319,10 +319,10 @@ export default function TeamProfiles() {
                     </Stack>
                     <Box component="ul" sx={{ pl: 2, m: 0 }}>
                       {member.achievements.map((achievement, idx) => (
-                        <Typography 
+                        <Typography
                           key={idx}
-                          component="li" 
-                          variant="body2" 
+                          component="li"
+                          variant="body2"
                           color="text.secondary"
                           sx={{ mb: 0.5, fontSize: '0.85rem', lineHeight: 1.4 }}
                         >
@@ -338,11 +338,11 @@ export default function TeamProfiles() {
         </Grid>
 
         {/* Company Stats */}
-        <Paper 
+        <Paper
           elevation={6}
-          sx={{ 
-            mt: 8, 
-            p: 6, 
+          sx={{
+            mt: 8,
+            p: 6,
             borderRadius: 4,
             background: 'linear-gradient(135deg, #0064d7 0%, #004ba8 100%)',
             color: 'white',

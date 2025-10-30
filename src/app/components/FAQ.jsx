@@ -40,7 +40,7 @@ export default function FAQ() {
       faqs: [
         {
           question: "Can I invest in Nigerian real estate while living abroad?",
-          answer: "Absolutely! ALOTER specializes in diaspora investments. We have facilitated over $100M in investments from clients in USA, UK, Canada, Germany, and 15+ other countries. Our digital platform and virtual services make it seamless to invest from anywhere in the world."
+          answer: "Absolutely! GUE REALTY LIMITED specializes in diaspora investments. We have facilitated over $100M in investments from clients in USA, UK, Canada, Germany, and 15+ other countries. Our digital platform and virtual services make it seamless to invest from anywhere in the world."
         },
         {
           question: "How do I verify properties and avoid scams from abroad?",
@@ -52,7 +52,7 @@ export default function FAQ() {
         },
         {
           question: "How do I handle property management while abroad?",
-          answer: "ALOTER offers comprehensive property management services including tenant sourcing, rent collection, maintenance, insurance, and regular property reports. We handle everything so you can enjoy passive income without the stress of day-to-day management."
+          answer: "GUE REALTY LIMITED offers comprehensive property management services including tenant sourcing, rent collection, maintenance, insurance, and regular property reports. We handle everything so you can enjoy passive income without the stress of day-to-day management."
         }
       ]
     },
@@ -108,8 +108,8 @@ export default function FAQ() {
       color: "error",
       faqs: [
         {
-          question: "How do I know ALOTER is legitimate and trustworthy?",
-          answer: "ALOTER is fully registered (RC 8371222), licensed by ESVARBON, member of REDAN, and carries comprehensive insurance. We have 15+ years experience, 5000+ satisfied clients, and ₦100B+ in completed transactions. All credentials are verifiable with relevant authorities."
+          question: "How do I know GUE REALTY LIMITED is legitimate and trustworthy?",
+          answer: "GUE REALTY LIMITED is fully registered (RC 8371222), licensed by ESVARBON, member of REDAN, and carries comprehensive insurance. We have 15+ years experience, 5000+ satisfied clients, and ₦100B+ in completed transactions. All credentials are verifiable with relevant authorities."
         },
         {
           question: "What guarantees do you provide for my investment?",
@@ -120,8 +120,8 @@ export default function FAQ() {
           answer: "We provide: Weekly construction photos and videos, Monthly progress reports, Quarterly site inspections by independent surveyors, Live virtual site tours on request, and Real-time project dashboards accessible 24/7 from anywhere in the world."
         },
         {
-          question: "What happens if ALOTER faces business challenges?",
-          answer: "Your investments are protected through: Client asset segregation (your funds are never mixed with company funds), Insurance coverage for business continuity, Regulatory oversight by Nigerian authorities, and Partnership with international firms for additional security. Your property ownership is independent of ALOTER's business status."
+          question: "What happens if GUE REALTY LIMITED faces business challenges?",
+          answer: "Your investments are protected through: Client asset segregation (your funds are never mixed with company funds), Insurance coverage for business continuity, Regulatory oversight by Nigerian authorities, and Partnership with international firms for additional security. Your property ownership is independent of GUE REALTY LIMITED's business status."
         }
       ]
     }
@@ -149,8 +149,8 @@ export default function FAQ() {
   ];
 
   return (
-    <Box 
-      sx={{ 
+    <Box
+      sx={{
         py: { xs: 8, md: 12 },
         background: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)',
         position: 'relative',
@@ -160,10 +160,10 @@ export default function FAQ() {
       <Container maxWidth="xl">
         {/* Header Section */}
         <Box textAlign="center" mb={8}>
-          <Typography 
-            variant="h2" 
-            fontWeight="bold" 
-            sx={{ 
+          <Typography
+            variant="h2"
+            fontWeight="bold"
+            sx={{
               mb: 2,
               background: 'linear-gradient(135deg, #0064d7 0%, #004ba8 100%)',
               backgroundClip: 'text',
@@ -175,11 +175,11 @@ export default function FAQ() {
           >
             ❓ Frequently Asked Questions
           </Typography>
-          <Typography 
-            variant="h5" 
-            color="text.secondary" 
-            sx={{ 
-              maxWidth: '800px', 
+          <Typography
+            variant="h5"
+            color="text.secondary"
+            sx={{
+              maxWidth: '800px',
               mx: 'auto',
               lineHeight: 1.6,
               fontSize: { xs: '1.2rem', md: '1.5rem' }
@@ -192,17 +192,17 @@ export default function FAQ() {
         {/* FAQ Categories */}
         {faqCategories.map((category, categoryIndex) => (
           <Box key={categoryIndex} mb={6}>
-            <Paper 
+            <Paper
               elevation={4}
-              sx={{ 
+              sx={{
                 borderRadius: 3,
                 overflow: 'hidden',
                 border: '1px solid',
                 borderColor: `${category.color}.light`
               }}
             >
-              <Box 
-                sx={{ 
+              <Box
+                sx={{
                   backgroundColor: `${category.color}.main`,
                   color: 'white',
                   p: 3,
@@ -248,8 +248,8 @@ export default function FAQ() {
                       </Typography>
                     </AccordionSummary>
                     <AccordionDetails sx={{ px: 3, py: 2 }}>
-                      <Typography 
-                        variant="body1" 
+                      <Typography
+                        variant="body1"
                         sx={{ lineHeight: 1.7, color: 'text.secondary' }}
                       >
                         {faq.answer}
@@ -263,10 +263,10 @@ export default function FAQ() {
         ))}
 
         {/* Still Have Questions Section */}
-        <Paper 
+        <Paper
           elevation={8}
-          sx={{ 
-            p: 6, 
+          sx={{
+            p: 6,
             borderRadius: 4,
             background: 'linear-gradient(135deg, #0064d7 0%, #004ba8 100%)',
             color: 'white',
@@ -284,8 +284,8 @@ export default function FAQ() {
           <Grid container spacing={3} maxWidth="md" sx={{ mx: 'auto' }}>
             {contactOptions.map((option, index) => (
               <Grid item xs={12} md={4} key={index}>
-                <Card 
-                  sx={{ 
+                <Card
+                  sx={{
                     backgroundColor: 'rgba(255,255,255,0.1)',
                     backdropFilter: 'blur(10px)',
                     border: '1px solid rgba(255,255,255,0.2)',

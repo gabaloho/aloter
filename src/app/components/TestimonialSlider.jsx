@@ -23,7 +23,7 @@ export default function TestimonialSlider() {
       name: "Obinna Okeke",
       role: "Property Investor",
       location: "Lagos, Nigeria",
-      content: "ALOTER helped me acquire two prime properties in Lekki without any legal issues. Their documentation process is thorough and their team guided me through every step. My property value increased by 40% in just 18 months.",
+      content: "GUE REALTY LIMITED helped me acquire two prime properties in Lekki without any legal issues. Their documentation process is thorough and their team guided me through every step. My property value increased by 40% in just 18 months.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
       investment: "₦85M Portfolio"
@@ -33,7 +33,7 @@ export default function TestimonialSlider() {
       name: "Dr. Sarah Johnson",
       role: "Diaspora Investor",
       location: "Toronto, Canada",
-      content: "Living in Canada, I was skeptical about investing in Nigerian real estate. ALOTER's virtual tour system and regular progress videos convinced me. They delivered exactly as promised, and I now own 3 properties generating steady rental income.",
+      content: "Living in Canada, I was skeptical about investing in Nigerian real estate. GUE REALTY LIMITED's virtual tour system and regular progress videos convinced me. They delivered exactly as promised, and I now own 3 properties generating steady rental income.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b5e5?w=150&h=150&fit=crop&crop=face",
       investment: "3 Properties, $200K+"
@@ -43,7 +43,7 @@ export default function TestimonialSlider() {
       name: "Engineer Chukwuemeka Eze",
       role: "First-time Buyer",
       location: "Port Harcourt, Nigeria",
-      content: "As a young engineer, I thought property ownership was beyond my reach. ALOTER's flexible payment plan and ₦100K starter investment changed my life. I now own land in two states and plan to build my family home next year.",
+      content: "As a young engineer, I thought property ownership was beyond my reach. GUE REALTY LIMITED's flexible payment plan and ₦100K starter investment changed my life. I now own land in two states and plan to build my family home next year.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
       investment: "2 Land Plots"
@@ -53,7 +53,7 @@ export default function TestimonialSlider() {
       name: "Mrs. Folake Adeleke",
       role: "Commercial Developer",
       location: "Abuja, Nigeria",
-      content: "ALOTER managed our ₦500M shopping complex project from start to finish. Their project management exceeded our expectations - completed 3 weeks early and 8% under budget. We're now planning our second joint venture.",
+      content: "GUE REALTY LIMITED managed our ₦500M shopping complex project from start to finish. Their project management exceeded our expectations - completed 3 weeks early and 8% under budget. We're now planning our second joint venture.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face",
       investment: "₦500M Development"
@@ -63,7 +63,7 @@ export default function TestimonialSlider() {
       name: "Mr. James Mitchell",
       role: "Retired Executive",
       location: "London, UK",
-      content: "After being scammed by another company, I was hesitant to invest again. ALOTER's insurance coverage and escrow payment system gave me confidence. My apartment in VI Lagos generates 12% annual rental yield - better than UK property!",
+      content: "After being scammed by another company, I was hesitant to invest again. GUE REALTY LIMITED's insurance coverage and escrow payment system gave me confidence. My apartment in VI Lagos generates 12% annual rental yield - better than UK property!",
       rating: 5,
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
       investment: "12% Annual Returns"
@@ -73,7 +73,7 @@ export default function TestimonialSlider() {
       name: "Hajiya Fatima Abdullahi",
       role: "Business Owner",
       location: "Kano, Nigeria",
-      content: "ALOTER helped me diversify my business income through real estate. Their market analysis was spot-on, and my commercial property in Abuja is fully occupied with blue-chip tenants. ROI has been consistently above 15%.",
+      content: "GUE REALTY LIMITED helped me diversify my business income through real estate. Their market analysis was spot-on, and my commercial property in Abuja is fully occupied with blue-chip tenants. ROI has been consistently above 15%.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=150&h=150&fit=crop&crop=face",
       investment: "15%+ ROI"
@@ -84,7 +84,7 @@ export default function TestimonialSlider() {
   useEffect(() => {
     // Ensure we're on the client side
     setIsClient(true);
-    
+
     timerRef.current = setInterval(() => {
       setDirection(1);
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
@@ -132,7 +132,7 @@ export default function TestimonialSlider() {
               Client Success Stories
             </Typography>
             <Typography variant="subtitle1" color="text.secondary" maxWidth="md" mx="auto">
-              Hear from our satisfied clients about their ALOTER experience
+              Hear from our satisfied clients about their GUE REALTY LIMITED experience
             </Typography>
           </Box>
           <Box position="relative" maxWidth="md" mx="auto" minHeight={350}>
@@ -168,7 +168,7 @@ export default function TestimonialSlider() {
             Client Success Stories
           </Typography>
           <Typography variant="subtitle1" color="text.secondary" maxWidth="md" mx="auto">
-            Hear from our satisfied clients about their ALOTER experience
+            Hear from our satisfied clients about their GUE REALTY LIMITED experience
           </Typography>
         </Box>
         <Box position="relative" maxWidth="md" mx="auto" minHeight={350}>

@@ -2,6 +2,7 @@
 // Updated for comprehensive website improvements
 import Hero from './components/Hero';
 import About from './components/About';
+import Services from './components/Services';
 import PropertySearch from './components/PropertySearch';
 import InvestmentPlans from './components/InvestmentPlans';
 import MortgageCalculator from './components/MortgageCalculator';
@@ -41,6 +42,11 @@ export default function Home() {
         {/* About Section */}
         <section id="about">
           <About />
+        </section>
+
+        {/* Services Section */}
+        <section id="services">
+          <Services />
         </section>
 
         {/* Company Credentials Section - Build Trust Early */}

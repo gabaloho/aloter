@@ -37,34 +37,34 @@ export default function Hero() {
       {/* Content */}
       <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2 }}>
         <Box textAlign="center" px={2}>
-          <Typography 
-            variant="h4" 
-            sx={{ 
-              mb: 2, 
+          <Typography
+            variant="h4"
+            sx={{
+              mb: 2,
               fontWeight: 600,
               textShadow: '2px 2px 4px rgba(0,0,0,0.7)',
               letterSpacing: '1px'
             }}
           >
-            ALOTER REALTY LTD
+            GUE REALTY LIMITED
           </Typography>
 
-          <Typography 
-            variant="h6" 
-            sx={{ 
-              mb: 4, 
+          <Typography
+            variant="h6"
+            sx={{
+              mb: 4,
               opacity: 0.9,
               fontStyle: 'italic',
               textShadow: '1px 1px 3px rgba(0,0,0,0.7)',
             }}
           >
-            Your trusted partner in Nigerian real estate
+            Infrastructure • Project Finance • Real Estate • ESG Compliant
           </Typography>
 
-          <Typography 
-            variant="h1" 
-            fontWeight="bold" 
-            sx={{ 
+          <Typography
+            variant="h1"
+            fontWeight="bold"
+            sx={{
               mb: 4,
               fontSize: { xs: '2.5rem', md: '4rem' },
               lineHeight: 1.1,
@@ -76,15 +76,15 @@ export default function Hero() {
               filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.5))',
             }}
           >
-            Your Dream Property <br /> Awaits in Nigeria
+            Sustainable Infrastructure <br /> & Development Finance
           </Typography>
 
-          <Typography 
-            variant="h5" 
-            sx={{ 
-              mb: 6, 
-              opacity: 0.95, 
-              maxWidth: '700px', 
+          <Typography
+            variant="h5"
+            sx={{
+              mb: 6,
+              opacity: 0.95,
+              maxWidth: '700px',
               mx: 'auto',
               fontWeight: 400,
               lineHeight: 1.6,
@@ -95,8 +95,8 @@ export default function Hero() {
               backdropFilter: 'blur(10px)',
             }}
           >
-            Whether you're looking for a home, investment property, or developer partnership, 
-            we provide trusted real estate solutions tailored to your needs across Nigeria and beyond.
+            Driving sustainable development through innovative infrastructure finance, real estate development,
+            and asset management solutions that create lasting value for communities and investors across Africa.
           </Typography>
 
           {/* Services Highlight */}
@@ -113,9 +113,9 @@ export default function Hero() {
               boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
             }}
           >
-            <Typography 
-              variant="h6" 
-              sx={{ 
+            <Typography
+              variant="h6"
+              sx={{
                 fontWeight: 700,
                 textAlign: 'center',
                 mb: 1,
@@ -124,9 +124,9 @@ export default function Hero() {
             >
               🏢 Complete Real Estate Solutions
             </Typography>
-            <Typography 
-              variant="body1" 
-              sx={{ 
+            <Typography
+              variant="body1"
+              sx={{
                 textAlign: 'center',
                 fontWeight: 500,
                 lineHeight: 1.4,
@@ -137,16 +137,16 @@ export default function Hero() {
             </Typography>
           </Box>
 
-          <Stack 
-            direction={{ xs: 'column', sm: 'row' }} 
-            spacing={3} 
+          <Stack
+            direction={{ xs: 'column', sm: 'row' }}
+            spacing={3}
             justifyContent="center"
             alignItems="center"
             sx={{ mb: 8 }}
           >
-            <Button 
-              variant="contained" 
-              size="large" 
+            <Button
+              variant="contained"
+              size="large"
               href="#properties"
               sx={{
                 backgroundColor: 'white !important',
@@ -193,9 +193,9 @@ export default function Hero() {
             >
               Browse Properties
             </Button>
-            <Button 
-              variant="outlined" 
-              size="large" 
+            <Button
+              variant="outlined"
+              size="large"
               href="#contact"
               sx={{
                 borderColor: 'white !important',
@@ -249,8 +249,8 @@ export default function Hero() {
           </Stack>
 
           {/* Stats */}
-          <Box 
-            sx={{ 
+          <Box
+            sx={{
               backgroundColor: 'rgba(255,255,255,0.1)',
               backdropFilter: 'blur(20px)',
               border: '1px solid rgba(255,255,255,0.2)',
@@ -260,13 +260,13 @@ export default function Hero() {
               mx: 'auto',
             }}
           >
-            <Stack 
-              direction={{ xs: 'column', md: 'row' }} 
-              spacing={4} 
+            <Stack
+              direction={{ xs: 'column', md: 'row' }}
+              spacing={4}
               justifyContent="center"
               divider={
-                <Box sx={{ 
-                  width: { xs: '100px', md: '2px' }, 
+                <Box sx={{
+                  width: { xs: '100px', md: '2px' },
                   height: { xs: '2px', md: '80px' },
                   backgroundColor: 'rgba(255,255,255,0.3)',
                   mx: 'auto'
@@ -274,10 +274,10 @@ export default function Hero() {
               }
             >
               <Box textAlign="center">
-                <Typography 
-                  variant="h3" 
-                  fontWeight="bold" 
-                  sx={{ 
+                <Typography
+                  variant="h3"
+                  fontWeight="bold"
+                  sx={{
                     textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
                     background: 'linear-gradient(135deg, #ffffff 0%, #ffd700 100%)',
                     backgroundClip: 'text',
@@ -292,10 +292,10 @@ export default function Hero() {
                 </Typography>
               </Box>
               <Box textAlign="center">
-                <Typography 
-                  variant="h3" 
+                <Typography
+                  variant="h3"
                   fontWeight="bold"
-                  sx={{ 
+                  sx={{
                     textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
                     background: 'linear-gradient(135deg, #ffffff 0%, #ffd700 100%)',
                     backgroundClip: 'text',
@@ -310,10 +310,10 @@ export default function Hero() {
                 </Typography>
               </Box>
               <Box textAlign="center">
-                <Typography 
-                  variant="h3" 
+                <Typography
+                  variant="h3"
                   fontWeight="bold"
-                  sx={{ 
+                  sx={{
                     textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
                     background: 'linear-gradient(135deg, #ffffff 0%, #ffd700 100%)',
                     backgroundClip: 'text',

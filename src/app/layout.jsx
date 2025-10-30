@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Aloter Realty",
-  description: "Turning your realty fantasies into reality",
+  title: "GUE REALTY LIMITED",
+  description: "ESG-compliant infrastructure finance, real estate development, and sustainable investment solutions across Africa",
 };
 
 export default function RootLayout({ children }) {

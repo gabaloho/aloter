@@ -5,12 +5,12 @@ import Image from 'next/image';
 
 export default function BrandLogo({ variant = 'desktop' }) {
   const isMobile = variant === 'mobile';
-  
+
   return (
-    <Box 
-      display="flex" 
-      alignItems="center" 
-      sx={{ 
+    <Box
+      display="flex"
+      alignItems="center"
+      sx={{
         cursor: 'pointer',
         transition: 'transform 0.2s ease',
         '&:hover': {
@@ -25,9 +25,9 @@ export default function BrandLogo({ variant = 'desktop' }) {
       }}
     >
       <Box
-        sx={{ 
-          width: isMobile ? 40 : 48, 
-          height: isMobile ? 40 : 48, 
+        sx={{
+          width: isMobile ? 40 : 48,
+          height: isMobile ? 40 : 48,
           mr: 2,
           display: 'flex',
           alignItems: 'center',
@@ -36,8 +36,8 @@ export default function BrandLogo({ variant = 'desktop' }) {
       >
         <Box
           component="img"
-          src="/logo.svg"
-          alt="ALOTER REALTY LTD"
+          src="/logo.png"
+          alt="GUE REALTY LIMITED"
           sx={{
             width: '100%',
             height: '100%',
@@ -46,28 +46,28 @@ export default function BrandLogo({ variant = 'desktop' }) {
         />
       </Box>
       <Box>
-        <Typography 
-          variant={isMobile ? "h6" : "h6"} 
-          fontWeight="bold" 
-          sx={{ 
+        <Typography
+          variant={isMobile ? "h6" : "h6"}
+          fontWeight="bold"
+          sx={{
             color: 'white',
             lineHeight: 1,
             letterSpacing: '-0.5px',
             fontSize: isMobile ? '1.1rem' : '1.25rem'
           }}
         >
-          ALOTER REALTY
+          GUE REALTY
         </Typography>
-        <Typography 
-          variant="caption" 
-          sx={{ 
+        <Typography
+          variant="caption"
+          sx={{
             color: 'rgba(255,255,255,0.8)',
             fontSize: isMobile ? '0.7rem' : '0.75rem',
             lineHeight: 1,
             fontWeight: isMobile ? 500 : 400
           }}
         >
-          Realty Made Real
+          Sustainable Infrastructure Finance
         </Typography>
       </Box>
     </Box>

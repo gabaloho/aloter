@@ -17,8 +17,8 @@ import BrandLogo from './BrandLogo';
 const navItems = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
-  { label: 'Properties', href: '#properties' },
   { label: 'Services', href: '#services' },
+  { label: 'Properties', href: '#properties' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -55,7 +55,7 @@ export default function Navigation() {
     if (typeof window !== 'undefined') {
       const element = document.querySelector(href);
       if (element) {
-        element.scrollIntoView({ 
+        element.scrollIntoView({
           behavior: 'smooth',
           block: 'start'
         });
@@ -66,16 +66,16 @@ export default function Navigation() {
   // Don't render until mounted to prevent hydration mismatch
   if (!mounted) {
     return (
-      <AppBar 
-        position="sticky" 
+      <AppBar
+        position="sticky"
         elevation={0}
-        sx={{ 
+        sx={{
           backgroundColor: 'grey.900',
           borderBottom: '1px solid rgba(255,255,255,0.1)',
         }}
       >
         <Container maxWidth="xl">
-          <Toolbar sx={{ 
+          <Toolbar sx={{
             px: { xs: 1, sm: 2 },
             py: { xs: 0.5, sm: 1 },
             minHeight: { xs: 64, sm: 72 }
@@ -84,8 +84,8 @@ export default function Navigation() {
               <BrandLogo />
             </Box>
             <Box sx={{ flexGrow: 1 }} />
-            <Box sx={{ 
-              display: { xs: 'none', lg: 'flex' }, 
+            <Box sx={{
+              display: { xs: 'none', lg: 'flex' },
               gap: 1,
               alignItems: 'center'
             }}>
@@ -152,7 +152,7 @@ export default function Navigation() {
 
   const drawer = (
     <Box
-      sx={{ 
+      sx={{
         width: 280,
         height: '100%',
         background: 'linear-gradient(135deg, #0064d7 0%, #004ba8 100%)',
@@ -162,15 +162,15 @@ export default function Navigation() {
       }}
     >
       {/* Mobile Header */}
-      <Box sx={{ 
-        p: 3, 
+      <Box sx={{
+        p: 3,
         borderBottom: '1px solid rgba(255,255,255,0.2)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between'
       }}>
         <BrandLogo variant="mobile" />
-        <IconButton 
+        <IconButton
           onClick={handleDrawerToggle}
           sx={{ color: 'white' }}
         >
@@ -181,7 +181,7 @@ export default function Navigation() {
       {/* Mobile Navigation Items */}
       <List sx={{ flex: 1, pt: 2 }}>
         {navItems.map((item) => (
-          <ListItem 
+          <ListItem
             key={item.label}
             onClick={() => handleNavClick(item.href)}
             sx={{
@@ -196,8 +196,8 @@ export default function Navigation() {
               }
             }}
           >
-            <ListItemText 
-              primary={item.label} 
+            <ListItemText
+              primary={item.label}
               primaryTypographyProps={{
                 fontWeight: 600,
                 fontSize: '1.1rem',
@@ -230,7 +230,7 @@ export default function Navigation() {
         >
           Contact Us
         </Button>
-        
+
         {/* Mobile Call Button */}
         <Button
           fullWidth
@@ -261,10 +261,10 @@ export default function Navigation() {
 
   return (
     <>
-      <AppBar 
-        position="sticky" 
+      <AppBar
+        position="sticky"
         elevation={scrolled ? 8 : 0}
-        sx={{ 
+        sx={{
           backgroundColor: 'grey.900',
           backdropFilter: 'blur(20px)',
           borderBottom: scrolled ? 'none' : '1px solid rgba(255,255,255,0.1)',
@@ -273,7 +273,7 @@ export default function Navigation() {
         }}
       >
         <Container maxWidth="xl">
-          <Toolbar sx={{ 
+          <Toolbar sx={{
             px: { xs: 1, sm: 2 },
             py: { xs: 0.5, sm: 1 },
             minHeight: { xs: 64, sm: 72 }
@@ -287,8 +287,8 @@ export default function Navigation() {
             <Box sx={{ flexGrow: 1 }} />
 
             {/* Desktop Navigation */}
-            <Box sx={{ 
-              display: { xs: 'none', lg: 'flex' }, 
+            <Box sx={{
+              display: { xs: 'none', lg: 'flex' },
               gap: 1,
               alignItems: 'center'
             }}>
@@ -331,7 +331,7 @@ export default function Navigation() {
                   {item.label}
                 </Button>
               ))}
-              
+
               {/* Call Now Button (Desktop) */}
               <Button
                 href="tel:+2341234567890"

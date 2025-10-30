@@ -37,7 +37,7 @@ export default function Contact() {
     // The form will be submitted to Formspree
     // You'll need to replace 'YOUR_FORM_ID' with your actual Formspree form ID
     const formspreeUrl = 'https://formspree.io/f/YOUR_FORM_ID';
-    
+
     try {
       const response = await fetch(formspreeUrl, {
         method: 'POST',
@@ -46,7 +46,7 @@ export default function Contact() {
         },
         body: JSON.stringify(formData),
       });
-      
+
       if (response.ok) {
         alert('Message sent successfully! We will get back to you soon.');
         setFormData({
@@ -65,8 +65,8 @@ export default function Contact() {
   };
 
   return (
-    <Box 
-      sx={{ 
+    <Box
+      sx={{
         background: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 50%, #e8f4fd 100%)',
         py: { xs: 8, md: 12 },
         position: 'relative',
@@ -87,10 +87,10 @@ export default function Contact() {
       <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 2 }}>
         {/* Enhanced Section Header */}
         <Box textAlign="center" mb={8}>
-          <Typography 
-            variant="h2" 
-            fontWeight="bold" 
-            sx={{ 
+          <Typography
+            variant="h2"
+            fontWeight="bold"
+            sx={{
               mb: 2,
               background: 'linear-gradient(135deg, #0064d7 0%, #004ba8 100%)',
               backgroundClip: 'text',
@@ -102,11 +102,11 @@ export default function Contact() {
           >
             📞 Contact Our Expert Team
           </Typography>
-          <Typography 
-            variant="h5" 
-            color="text.secondary" 
-            sx={{ 
-              maxWidth: '800px', 
+          <Typography
+            variant="h5"
+            color="text.secondary"
+            sx={{
+              maxWidth: '800px',
               mx: 'auto',
               lineHeight: 1.6,
               fontSize: { xs: '1.2rem', md: '1.5rem' }
@@ -119,9 +119,9 @@ export default function Contact() {
         <Grid container spacing={6}>
           {/* Consolidated Contact Information Card */}
           <Grid item xs={12} lg={5}>
-            <Paper 
+            <Paper
               elevation={12}
-              sx={{ 
+              sx={{
                 p: 6,
                 borderRadius: 4,
                 background: 'linear-gradient(145deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 100%)',
@@ -142,8 +142,8 @@ export default function Contact() {
             >
               {/* Header */}
               <Box sx={{ mb: 4, textAlign: 'center' }}>
-                <Box 
-                  sx={{ 
+                <Box
+                  sx={{
                     width: 80,
                     height: 80,
                     borderRadius: '50%',
@@ -159,10 +159,10 @@ export default function Contact() {
                   <BusinessIcon sx={{ fontSize: 40, color: 'white' }} />
                 </Box>
                 <Typography variant="h4" fontWeight="bold" gutterBottom color="primary.main">
-                  ALOTER Realty Ltd
+                  GUE REALTY LIMITED
                 </Typography>
                 <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem' }}>
-                  Your trusted partner in real estate investment and property development across Nigeria and beyond.
+                  Your trusted partner in infrastructure finance, real estate development, and ESG-compliant investment solutions across Africa.
                 </Typography>
               </Box>
 
@@ -170,11 +170,11 @@ export default function Contact() {
                 {/* Address */}
                 <Box>
                   <Box display="flex" alignItems="flex-start" gap={3}>
-                    <Box 
-                      sx={{ 
-                        backgroundColor: '#ff6b6b', 
-                        color: 'white', 
-                        p: 2, 
+                    <Box
+                      sx={{
+                        backgroundColor: '#ff6b6b',
+                        color: 'white',
+                        p: 2,
                         borderRadius: 3,
                         minWidth: 56,
                         height: 56,
@@ -191,13 +191,13 @@ export default function Contact() {
                         📍 Registered Address
                       </Typography>
                       <Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.6, mb: 1 }}>
-                        NO 18, MEGA BOND ESTATE, 3RD AVENUE<br />
-                        GWARIMPA, ABUJA, FCT, NIGERIA
+                        Old Chief Magistrate Court, HVCH+482<br />
+                        Wannune 981107, Benue, Nigeria
                       </Typography>
-                      <Typography 
-                        variant="body2" 
-                        sx={{ 
-                          color: 'primary.main', 
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          color: 'primary.main',
                           fontWeight: 700,
                           backgroundColor: 'rgba(0,100,215,0.1)',
                           px: 2,
@@ -218,11 +218,11 @@ export default function Contact() {
                 <Grid container spacing={3}>
                   <Grid item xs={12} sm={6}>
                     <Box display="flex" alignItems="center" gap={2}>
-                      <Box 
-                        sx={{ 
-                          backgroundColor: '#4ecdc4', 
-                          color: 'white', 
-                          p: 1.5, 
+                      <Box
+                        sx={{
+                          backgroundColor: '#4ecdc4',
+                          color: 'white',
+                          p: 1.5,
                           borderRadius: 2,
                           display: 'flex',
                           alignItems: 'center',
@@ -244,11 +244,11 @@ export default function Contact() {
                   </Grid>
                   <Grid item xs={12} sm={6}>
                     <Box display="flex" alignItems="center" gap={2}>
-                      <Box 
-                        sx={{ 
-                          backgroundColor: '#45b7d1', 
-                          color: 'white', 
-                          p: 1.5, 
+                      <Box
+                        sx={{
+                          backgroundColor: '#45b7d1',
+                          color: 'white',
+                          p: 1.5,
                           borderRadius: 2,
                           display: 'flex',
                           alignItems: 'center',
@@ -263,7 +263,7 @@ export default function Contact() {
                           ✉️ Email
                         </Typography>
                         <Typography variant="body1" color="text.primary" fontWeight={600}>
-                          info@aloterrealty.com
+                          info@guerealtyltd.com
                         </Typography>
                       </Box>
                     </Box>
@@ -275,11 +275,11 @@ export default function Contact() {
                 {/* Business Hours */}
                 <Box>
                   <Box display="flex" alignItems="flex-start" gap={3}>
-                    <Box 
-                      sx={{ 
-                        backgroundColor: '#f093fb', 
-                        color: 'white', 
-                        p: 2, 
+                    <Box
+                      sx={{
+                        backgroundColor: '#f093fb',
+                        color: 'white',
+                        p: 2,
                         borderRadius: 3,
                         minWidth: 56,
                         height: 56,
@@ -354,10 +354,10 @@ export default function Contact() {
 
           {/* Enhanced Contact Form */}
           <Grid item xs={12} lg={7}>
-            <Paper 
-              elevation={12} 
-              sx={{ 
-                p: 6, 
+            <Paper
+              elevation={12}
+              sx={{
+                p: 6,
                 borderRadius: 4,
                 background: 'linear-gradient(145deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.95) 100%)',
                 backdropFilter: 'blur(20px)',
@@ -384,8 +384,8 @@ export default function Contact() {
                 </Typography>
               </Box>
 
-              <Box 
-                component="form" 
+              <Box
+                component="form"
                 onSubmit={handleSubmit}
                 action="https://formspree.io/f/YOUR_FORM_ID"
                 method="POST"
@@ -520,9 +520,9 @@ export default function Contact() {
         </Grid>
 
         {/* Enhanced Call to Action */}
-        <Box 
-          textAlign="center" 
-          sx={{ 
+        <Box
+          textAlign="center"
+          sx={{
             mt: 10,
             p: 8,
             background: 'linear-gradient(135deg, #0064d7 0%, #004ba8 100%)',
@@ -545,14 +545,14 @@ export default function Contact() {
         >
           <Box sx={{ position: 'relative', zIndex: 2 }}>
             <Typography variant="h3" fontWeight="bold" gutterBottom sx={{ textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>
-              🏆 Ready to Start Your Real Estate Journey?
+              � Ready to Drive Sustainable Infrastructure Development?
             </Typography>
             <Typography variant="h6" sx={{ mb: 4, opacity: 0.95, maxWidth: '800px', mx: 'auto', lineHeight: 1.7 }}>
-              Join thousands of satisfied clients who have found their dream properties and achieved their investment goals with ALOTER Realty. Our expert team is standing by to help you navigate the Nigerian real estate market with confidence.
+              Partner with GUE REALTY LIMITED to access innovative infrastructure finance solutions and ESG-compliant investment opportunities that create lasting value for communities across Africa.
             </Typography>
-            <Stack 
-              direction={{ xs: 'column', sm: 'row' }} 
-              spacing={3} 
+            <Stack
+              direction={{ xs: 'column', sm: 'row' }}
+              spacing={3}
               justifyContent="center"
             >
               <Button
