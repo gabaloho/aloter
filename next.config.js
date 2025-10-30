@@ -1,11 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+  // Vercel handles Next.js deployment automatically, no need for static export
   images: {
-    unoptimized: true,
+    // Vercel supports optimized images by default
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
   },
-  trailingSlash: true,
-  skipTrailingSlashRedirect: true,
+  // Remove static export configurations for Vercel
 };
 
 module.exports = nextConfig;

@@ -18,6 +18,7 @@ import Contact from './components/Contact';
 import NewsletterSignup from './components/NewsletterSignup';
 import Navigation from './components/Navigation';
 import NoSSR from './components/NoSSR';
+import ClientOnly from './components/ClientOnly';
 import Footer from './components/Footer';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
@@ -30,7 +31,9 @@ export default function Home() {
   return (
     <Box>
       {/* Modern Navigation Bar */}
-      <Navigation />
+      <ClientOnly>
+        <Navigation />
+      </ClientOnly>
 
       {/* Main Content */}
       <main>
@@ -93,9 +96,9 @@ export default function Home() {
         </section>
 
         {/* Stats Counter Section */}
-        <NoSSR>
+        <ClientOnly>
           <StatsCounter />
-        </NoSSR>
+        </ClientOnly>
 
         {/* Team Profiles Section - Build Trust with Faces */}
         <section id="team">
@@ -104,15 +107,15 @@ export default function Home() {
 
         {/* Testimonials Section */}
         <section id="testimonials">
-          <NoSSR>
+          <ClientOnly>
             <TestimonialSlider />
-          </NoSSR>
+          </ClientOnly>
         </section>
 
         {/* Diaspora Assurance Section */}
-        <NoSSR>
+        <ClientOnly>
           <DiasporaAssurance />
-        </NoSSR>
+        </ClientOnly>
 
         {/* FAQ Section - Address Common Concerns */}
         <section id="faq">
@@ -121,9 +124,9 @@ export default function Home() {
 
         {/* Property Map Section */}
         <section id="property-map">
-          <NoSSR>
+          <ClientOnly>
             <PropertyMap />
-          </NoSSR>
+          </ClientOnly>
         </section>
 
         {/* Newsletter Signup Section */}
@@ -133,9 +136,9 @@ export default function Home() {
 
         {/* Contact Section */}
         <section id="contact">
-          <NoSSR>
+          <ClientOnly>
             <Contact />
-          </NoSSR>
+          </ClientOnly>
         </section>
       </main>
 
