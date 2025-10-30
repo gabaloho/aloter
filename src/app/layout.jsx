@@ -16,6 +16,23 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "GUE REALTY LIMITED",
   description: "ESG-compliant infrastructure finance, real estate development, and sustainable investment solutions across Africa",
+  icons: {
+    icon: [
+      { url: '/logo.png', sizes: '32x32', type: 'image/png' },
+      { url: '/logo.png', sizes: '16x16', type: 'image/png' },
+    ],
+    shortcut: '/logo.png',
+    apple: [
+      { url: '/logo.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      {
+        rel: 'icon',
+        url: '/logo.png',
+      },
+    ],
+  },
+  manifest: '/manifest.json',
 };
 
 export default function RootLayout({ children }) {

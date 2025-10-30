@@ -1,0 +1,21 @@
+{
+    "name": "GUE REALTY LIMITED",
+    "short_name": "GUE REALTY",
+    "description": "ESG-compliant infrastructure finance, real estate development, and sustainable investment solutions across Africa",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0064d7",
+    "icons": [
+        {
+            "src": "/logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
